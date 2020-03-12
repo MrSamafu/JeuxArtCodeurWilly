@@ -5,7 +5,7 @@ public class PlayerSetup : NetworkBehaviour
 {
 
     public Behaviour[] componentsToDisable;
-
+    Camera sceneCamera;
     private void Start()
     {
         if (!isLocalPlayer)
@@ -19,8 +19,20 @@ public class PlayerSetup : NetworkBehaviour
         }
         else
         {
-            Camera.main.gameObject.SetActive(false);
+            sceneCamera = Camera.main;
+            if(sceneCamera != null)
+            {
+                sceneCamera.gameObject.SetActive(false);
+            }
             
+        }
+    }
+
+    private void OnDisable()
+    {
+        if(sceneCamera != null)
+        {
+            sceneCamera.gameObject.SetActive(true);
         }
     }
 }
