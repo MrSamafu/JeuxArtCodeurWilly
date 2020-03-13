@@ -263,7 +263,10 @@ GameObject:
   - component: {fileID: 2101426116869585211}
   - component: {fileID: 2101426116869585209}
   - component: {fileID: 2101426116869585158}
+  - component: {fileID: 2776064967398286169}
   - component: {fileID: 2101426116869585210}
+  - component: {fileID: -6936838092588271759}
+  - component: {fileID: 7258776978197375936}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -344,6 +347,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   lookSensitivity: 15
+--- !u!114 &2776064967398286169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101426116869585156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3fbedf688aaf8e4993e56589fc2b921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  componentsToDisable:
+  - {fileID: 2101426116869585158}
+  - {fileID: 2101426116869585209}
+  - {fileID: 2101426117253383761}
+  - {fileID: 2101426117253383774}
 --- !u!114 &2101426116869585210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +381,45 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   m_AssetId: 
+--- !u!114 &-6936838092588271759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101426116869585156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.05
+  clientAuthority: 1
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
+  compressRotation: 1
+--- !u!114 &7258776978197375936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101426116869585156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734b48bea0b204338958ee3d885e11f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 0
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
+  compressRotation: 1
+  target: {fileID: 2101426117253383775}
 --- !u!1 &2101426117253383772
 GameObject:
   m_ObjectHideFlags: 0
