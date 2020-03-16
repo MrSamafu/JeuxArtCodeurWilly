@@ -6,12 +6,20 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 10f;
     public float lookSensitivity = 3f;
-
     private PlayerMotor motor;
+    private bool isJumping = false;
+    public float jumpForce = 300f;
+    private bool isGrounded;
+
+    public GameObject groundChecker;
+
+    
 
     private void Start()
     {
         motor = GetComponent<PlayerMotor>();
+        
+        
     }
 
     private void Update()
@@ -38,6 +46,27 @@ public class PlayerController : MonoBehaviour
 
         motor.RotateCamera(_cameraRotation);
 
+        if (groundChecker.GetComponent<BoxCollider>().isTrigger)
+        {
+            isGrounded = true;
+            Debug.Log(isGrounded);
+        }
+        else if (!groundChecker.GetComponent<BoxCollider>().isTrigger)
+        {
+            isGrounded = false;
+            Debug.Log(isGrounded);
+        }
 
+        if (Input.GetButtonDown("Jump")&& isJumping == false){
+
+            isJumping = true;
+            motor.jump(jumpForce);
+            isJumping = false;
+        }
+
+        
+
+        
     }
+
 }
