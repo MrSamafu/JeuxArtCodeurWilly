@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         {
 
             isJumping = true;
-            motor.jump(jumpForce);
+            motor.jump(jumpForce);//envoie la valeur au PlayerMotor pour etre éxecuter
             isJumping = false;
         }
 

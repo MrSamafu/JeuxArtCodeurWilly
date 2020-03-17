@@ -320,7 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   lookSensitivity: 15
-  jumpForce: 100000
+  jumpForce: 20000
   groundChecker: {fileID: 4165072775367191508}
 --- !u!114 &2776064967398286169
 MonoBehaviour:
