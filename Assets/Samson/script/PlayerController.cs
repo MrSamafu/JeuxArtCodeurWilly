@@ -46,18 +46,11 @@ public class PlayerController : MonoBehaviour
 
         motor.RotateCamera(_cameraRotation);
 
-        if (groundChecker.GetComponent<BoxCollider>().isTrigger)
-        {
-            isGrounded = true;
-            Debug.Log(isGrounded);
-        }
-        else if (!groundChecker.GetComponent<BoxCollider>().isTrigger)
-        {
-            isGrounded = false;
-            Debug.Log(isGrounded);
-        }
+        
+        
 
-        if (Input.GetButtonDown("Jump")&& isJumping == false){
+        if (Input.GetButtonDown("Jump")&& isJumping == false && isGrounded == true)//fonction saut / uniquement si le personnage touche un sol
+        {
 
             isJumping = true;
             motor.jump(jumpForce);
@@ -67,6 +60,10 @@ public class PlayerController : MonoBehaviour
         
 
         
+    }
+    public void ToucheFloor(bool _isGrounded)//récupère une valeurs booléen qui permet de savoir si le personnage touche le sol 
+    {
+        isGrounded = _isGrounded;
     }
 
 }
