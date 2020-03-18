@@ -17,9 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        motor = GetComponent<PlayerMotor>();
-        
-        
+        motor = GetComponent<PlayerMotor>(); 
     }
 
     private void Update()
@@ -42,9 +40,9 @@ public class PlayerController : MonoBehaviour
 
         float _xRot = Input.GetAxisRaw("Mouse Y");
 
-        Vector3 _cameraRotation = new Vector3(_xRot, 0, 0) * lookSensitivity;
+        float _cameraRotationX = _xRot * lookSensitivity;
 
-        motor.RotateCamera(_cameraRotation);
+        motor.RotateCamera(_cameraRotationX);
 
         
         
