@@ -5,7 +5,11 @@ public class PlayerMotor : MonoBehaviour
 {
     private Vector3 velocity;
     private Vector3 rotation;
-    private Vector3 cameraRotation;
+    private float cameraRotationX = 0f;
+    private float jumpForce;
+    private bool isJumping = false;
+    private float currentCameraRotationX = 0f;
+    public float cameraRotationLimit = 85f;
 
     public Camera cam;
 
@@ -30,19 +34,34 @@ public class PlayerMotor : MonoBehaviour
         {
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
         }
+        if(isJumping != false)
+        {
+            rb.AddForce(new Vector3(0f,jumpForce,0f));
+            isJumping = false;
+        }
     }
     public void Rotate(Vector3 _rotation)
     {
         rotation = _rotation;
     }
-    public void RotateCamera(Vector3 _cameraRotation)
+    public void RotateCamera(float _cameraRotationX)
     {
-        cameraRotation = _cameraRotation;
+        cameraRotationX = _cameraRotationX;
+    }
+    public void jump(float _jumpForce)
+    {
+        jumpForce = _jumpForce;
+        isJumping = true;
     }
     private void PerformRotation()
     {
+        //récupération de la rotation + clamp la rotation
         rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
-        cam.transform.Rotate(-cameraRotation);
+        currentCameraRotationX -= cameraRotationX;
+        currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -cameraRotationLimit, cameraRotationLimit);
+        //applique les changement à la camera après le clamp
+        cam.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0f, 0f);
+        
     }
 
 

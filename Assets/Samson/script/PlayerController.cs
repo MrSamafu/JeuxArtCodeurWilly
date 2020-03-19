@@ -6,12 +6,18 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 10f;
     public float lookSensitivity = 3f;
-
     private PlayerMotor motor;
+    private bool isJumping = false;
+    public float jumpForce = 300f;
+    private bool isGrounded;
+
+    public GameObject groundChecker;
+
+    
 
     private void Start()
     {
-        motor = GetComponent<PlayerMotor>();
+        motor = GetComponent<PlayerMotor>(); 
     }
 
     private void Update()
@@ -34,10 +40,28 @@ public class PlayerController : MonoBehaviour
 
         float _xRot = Input.GetAxisRaw("Mouse Y");
 
-        Vector3 _cameraRotation = new Vector3(_xRot, 0, 0) * lookSensitivity;
+        float _cameraRotationX = _xRot * lookSensitivity;
 
-        motor.RotateCamera(_cameraRotation);
+        motor.RotateCamera(_cameraRotationX);
 
+        
+        
 
+        if (Input.GetButtonDown("Jump")&& isJumping == false && isGrounded == true)//fonction saut / uniquement si le personnage touche un sol
+        {
+
+            isJumping = true;
+            motor.jump(jumpForce);//envoie la valeur au PlayerMotor pour etre éxecuter
+            isJumping = false;
+        }
+
+        
+
+        
     }
+    public void ToucheFloor(bool _isGrounded)//récupère une valeurs booléen qui permet de savoir si le personnage touche le sol 
+    {
+        isGrounded = _isGrounded;
+    }
+
 }

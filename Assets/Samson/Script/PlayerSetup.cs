@@ -5,17 +5,14 @@ public class PlayerSetup : NetworkBehaviour
 {
 
     public Behaviour[] componentsToDisable;
+    public string remoteLayerName = "RemotePlayer";
     Camera sceneCamera;
     private void Start()
     {
         if (!isLocalPlayer)
         {
-            //boucle qui desactive les components des autre joueurs.
-            for(int i = 0; i < componentsToDisable.Length; i++)
-            {
-                componentsToDisable[i].enabled = false;
-
-            }
+            DisableComponents();
+            AssignRemoteLayer();
         }
         else
         {
@@ -25,6 +22,27 @@ public class PlayerSetup : NetworkBehaviour
                 sceneCamera.gameObject.SetActive(false);
             }
             
+        }
+        RegisterPlayer();
+
+
+    }
+    private void RegisterPlayer()
+    {
+        string _ID = "Player" + GetComponent<NetworkIdentity>().netId;
+        transform.name = _ID;
+    }
+    private void AssignRemoteLayer()
+    {
+        gameObject.layer = LayerMask.NameToLayer(remoteLayerName);
+    }
+    private void DisableComponents()
+    {
+        //boucle qui desactive les components des autre joueurs.
+        for (int i = 0; i < componentsToDisable.Length; i++)
+        {
+            componentsToDisable[i].enabled = false;
+
         }
     }
 
