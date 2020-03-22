@@ -22,13 +22,14 @@ public class PlayerShoot : NetworkBehaviour
             Shoot();
         }
     }
+
     [Client]
     private void Shoot()
     {
         RaycastHit _hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out _hit, weapon.range, mask))
         {
-            if(_hit.collider.tag == "Player")
+            if(_hit.collider.tag == "Joueur")
             {
                 CmdPlayerShoot(_hit.collider.name);
             }
@@ -36,7 +37,7 @@ public class PlayerShoot : NetworkBehaviour
     }
 
     [Command]
-    void CmdPlayerShoot(string _ID)
+    private void CmdPlayerShoot(string _ID)
     {
         Debug.Log(_ID + " a été touché.");
     }

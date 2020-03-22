@@ -29,12 +29,13 @@ public class PlayerSetup : NetworkBehaviour
     }
     private void RegisterPlayer()
     {
-        string _ID = "Player" + GetComponent<NetworkIdentity>().netId;
+        string _ID = "Player " + GetComponent<NetworkIdentity>().netId;
         transform.name = _ID;
     }
     private void AssignRemoteLayer()
     {
         gameObject.layer = LayerMask.NameToLayer(remoteLayerName);
+        
     }
     private void DisableComponents()
     {
