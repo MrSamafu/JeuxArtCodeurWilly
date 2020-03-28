@@ -3,7 +3,19 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
 
+    private void Awake()
+    {
+        if (instance != null){
+            Debug.LogError("Erreur GameManager, plus d'un objet gameManager dans la scene");
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+    #region PlayerTracking
     private const string PLAYER_ID_PREFIX = "Player ";
 
     private static Dictionary<string, Player> players = new Dictionary<string, Player>();
@@ -38,5 +50,7 @@ public class GameManager : MonoBehaviour
         GUILayout.EndVertical();
         GUILayout.EndArea();
     }*/
+    #endregion
 
+    public MatchSettings matchSettings;
 }

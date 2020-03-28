@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Mirror;
+using System.Collections;
 
 public class Player : NetworkBehaviour
 {
@@ -77,8 +78,30 @@ public class Player : NetworkBehaviour
             _col.enabled = false;
         }
         Debug.Log(transform.name + " est mort !");
-        //appeler la fonction de respawn
+
+        StartCoroutine(Respawn());
 
     }
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(GameManager.instance.matchSettings.respawnTime);
+        SetDefault();
+        Transform _spawnPoint = NetworkManager.singleton.GetStartPosition();
+        transform.position = _spawnPoint.position;
+        transform.rotation = _spawnPoint.rotation;
+    }
+    //Permet de ce suicider/ Permet de tester la fonction de respawn et de degats.
+    /*private void Update()
+    {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            RpcTakeDamage(9999);
+        }
+    }*/
 
 }
