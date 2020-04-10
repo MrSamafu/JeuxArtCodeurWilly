@@ -17,10 +17,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.84603
+  m_TransitionDuration: 0.1512415
   m_TransitionOffset: 0
   m_ExitTime: 0
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -137,6 +137,31 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &-2077080282427353740
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Have a pistol ?
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -5273179544529654648}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-1939321193698746445
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -154,10 +179,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 1.6769328
-  m_TransitionOffset: 0.12929662
-  m_ExitTime: 2.0687451
-  m_HasExitTime: 0
+  m_TransitionDuration: 0.49539527
+  m_TransitionOffset: 0.027758224
+  m_ExitTime: 0.44413194
+  m_HasExitTime: 1
   m_HasFixedDuration: 0
   m_InterruptionSource: 3
   m_OrderedInterruption: 0
@@ -243,10 +268,11 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Aim_Pistol
-  m_Speed: 0.2
+  m_Speed: 0.03
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8823045157665280404}
+  - {fileID: -2077080282427353740}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -306,9 +332,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.30810568
+  m_TransitionDuration: 0.037358142
   m_TransitionOffset: 0
-  m_ExitTime: 0.0000000020928888
+  m_ExitTime: 0.000000002193592
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
