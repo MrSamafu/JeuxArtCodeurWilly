@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomPlan2_36Polys_Water Dx11 Shader--2093555884
+  m_Shader: {fileID: 4800000, guid: e9c44006137e7ea4d83081cbaa451d95, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AmbientOcclusionmap2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Brush:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 2.737968, y: 2.737968}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 6c15f118e59ecde47933c328abdb6949, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cubemap:
+        m_Texture: {fileID: 8900000, guid: de78f930088fc194290da7400c89bfb5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Diffusemap2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 61af0a267c7c3324fb66b76752e0d2fb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: 3364919a4d448974b94d863e607ea4d6, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: 539d678a7f97861488b1121f7fd78974, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicRoughA2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normalmap2:
+        m_Texture: {fileID: 2800000, guid: 7d19a5fbbed8a474ba21f3080d5c1125, type: 3}
+        m_Scale: {x: 4, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Ambientlight: 0
+    - _Angle1: -1
+    - _Angle2: -1
+    - _AnimationSpeed1: 0.05
+    - _AnimationSpeed2: 0.05
+    - _AoIntensity1: 1
+    - _AoIntensity2: 1
+    - _BlurReflection: 0
+    - _Brightness1: -0.52
+    - _Brightness2: 0
+    - _Contrast: 3.5
+    - _Desaturation1: 0
+    - _Desaturation2: 0
+    - _EmissiveIntensity1: 1
+    - _EmissiveIntensity2: 1
+    - _Erase: 0
+    - _FresnelStrength: 0
+    - _Glossiness: 0.84
+    - _Heightmapcontstraintbymask: 0
+    - _MaskOpacity: 1
+    - _Metallic: 0.2
+    - _Metallic2: 0.2
+    - _NormalBlend: 0
+    - _NormalIntensity1: 1
+    - _NormalIntensity2: 0.02
+    - _Opacity: 0
+    - _OpacityDepth: 1
+    - _Pensize: 0
+    - _ReflectionIntensity: 3
+    - _Rotate: 0
+    - _Roughness2: 0.92
+    - _Saturation1: 0.07350001
+    - _Saturation2: 0
+    - _Spread: -1
+    - _Tessellation: 10
+    - _TilingLayer1: 2
+    - _TilingLayer2: 1
+    - __dirty: 1
+    m_Colors:
+    - _2Sided: {r: 1, g: 1, b: 1, a: 0}
+    - _Brushposition: {r: -0.11585066, g: -0.7887364, b: 0, a: 0}
+    - _CiconiaStudioBlend2: {r: 1, g: 1, b: 1, a: 0}
+    - _CiconiaStudiowatervertexoffset: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color2: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor2: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor1: {r: 1, g: 1, b: 1, a: 0}
+    - _SpecularColor2: {r: 1, g: 1, b: 1, a: 1}
+    - _ZAxis: {r: 0, g: 0, b: -0.19, a: 0}

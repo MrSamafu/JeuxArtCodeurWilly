@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomPlan2_36Polys_Standard shader2-1304305890
+  m_Shader: {fileID: 4800000, guid: 3fcb419d31f1c3d48a8ad46314b95c52, type: 3}
+  m_ShaderKeywords: _DISABLEALBEDOALPHACHANNEL_ON _INVERTALBEDOALPHA_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AmbientOcclusionmap2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Brush:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 5.4468083, y: 5.4468083}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 6c15f118e59ecde47933c328abdb6949, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Diffusemap2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 61af0a267c7c3324fb66b76752e0d2fb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: 3f89aa9bebc7816469a6055ca70e0e48, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normalmap2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: ff914c782c5411145beb6708102416a2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 2800000, guid: 3cef8b00831cc6b4389600ea66466e9e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecularmapGlossA2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AmbientLight: 0
+    - _Ambientlight: 0
+    - _AoIntensity1: 1
+    - _AoIntensity2: 0
+    - _Brightness1: 0
+    - _Brightness2: 0
+    - _Contrast: 3.5
+    - _Cutoff: 0.5
+    - _Deformation: -0.5
+    - _Desaturation1: 0
+    - _Desaturation2: 0
+    - _DisableAlbedoAlphaChannel: 1
+    - _EmissiveIntensity1: 1
+    - _EmissiveIntensity2: 1
+    - _Erase: 0
+    - _FresnelStrength: 0
+    - _Glossiness: 0.5
+    - _Glossiness1: 0.21
+    - _Glossiness2: 0.5
+    - _Heightmapcontstraintbymask: 0
+    - _InvertAlbedoAlpha: 1
+    - _InvertTexture: 0
+    - _InvertWindFlow: 0
+    - _MaskAmount: 0
+    - _MaskOpacity: 1
+    - _Metallic: 0.2
+    - _NormalBlend: 0
+    - _NormalIntensity1: 1
+    - _NormalIntensity2: 1
+    - _Opacity: 0
+    - _OpacityDepth: 1
+    - _Pensize: 0
+    - _Rotate: 0
+    - _Rotation: 76
+    - _Saturation1: 0
+    - _Saturation2: 0
+    - _Smooth: 0
+    - _SpecularIntensity1: 0.1
+    - _SpecularIntensity2: 0.2
+    - _Speed: 0
+    - _Spread: 0
+    - _Tessellation: 40
+    - _TilingLayer1: 2
+    - _TilingLayer2: 1
+    - _UseWorldCoordinate: 0
+    - _VisualizeWind: 0
+    - __dirty: 1
+    m_Colors:
+    - _2Sided: {r: 1, g: 1, b: 1, a: 0}
+    - _Brushposition: {r: -0.8296445, g: 0.08868717, b: 0, a: 0}
+    - _CiconiaStudioBlend2: {r: 1, g: 1, b: 1, a: 0}
+    - _CiconiaStudiowindvertexoffset: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color2: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor2: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor1: {r: 1, g: 1, b: 1, a: 0}
+    - _SpecularColor2: {r: 1, g: 1, b: 1, a: 0}

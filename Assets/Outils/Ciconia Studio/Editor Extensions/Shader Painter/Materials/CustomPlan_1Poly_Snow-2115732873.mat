@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CustomPlan_1Poly_Snow-2115732873
+  m_Shader: {fileID: 4800000, guid: 11b8e03b36b1548479618c84bc0aa11b, type: 3}
+  m_ShaderKeywords: _ERASE_ON _HEIGHTMAPCONTSTRAINTBYMASK_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AmbientOcclusionmap2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Brush:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 9.142858, y: 9.142858}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 85df9db28fb84cc40b1be6742e57be10, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Crystalsmap:
+        m_Texture: {fileID: 2800000, guid: 08dbb47f009cb7f41951a618283b9795, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Diffusemap2:
+        m_Texture: {fileID: 2800000, guid: f97153efdfc8e4a4f86e448b82d13f93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Diffusemap3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DotMask:
+        m_Texture: {fileID: 2800000, guid: 3b23b686c7899804c9d234594fbae0d0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b38cadc101e1931488e49baf82ed2ca6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: dc0e4997851c3114e8f618f155abc613, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: 03c03785c1514384a8a00594eaa28a9a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicRoughA2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normalmap2:
+        m_Texture: {fileID: 2800000, guid: 407ffe69f76082048bd4928155a0dd87, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normalmap3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Ambientlight: 0
+    - _AoIntensity1: 1
+    - _AoIntensity2: 1
+    - _Brightness1: 0
+    - _Brightness2: 0
+    - _Brightness3: 0
+    - _Contrast: 3.5
+    - _CrystalsIntensity: 0.1
+    - _Desaturatecrystals: 0
+    - _Desaturation1: 0
+    - _Desaturation2: 0
+    - _Desaturation3: 0
+    - _EmissiveIntensity1: 1
+    - _EmissiveIntensity2: 1
+    - _Erase: 1
+    - _FresnelStrength: 0
+    - _Glossiness: 1
+    - _Heightmapcontstraintbymask: 1
+    - _HeightmapcontstraintbymaskLayer1: 0
+    - _HeightmapcontstraintbymaskLayer2: 0
+    - _MaskAmount: 0.5
+    - _MaskGOpacity: 1
+    - _MaskGOpacityDepth: 1
+    - _MaskOpacity: 1
+    - _MaskROpacity: 1
+    - _MaskROpacityDepth: 1
+    - _Metallic: 0
+    - _Metallic2: 0
+    - _Metallic3: 0.2
+    - _NormalBlend: 0
+    - _NormalIntensity1: 1
+    - _NormalIntensity2: 1
+    - _NormalIntensity3: 1
+    - _Opacity: 0
+    - _OpacityDepth: 1
+    - _Pensize: 9.142858
+    - _Rotate: 0
+    - _Roughness2: 0
+    - _Roughness3: 0.5
+    - _Saturation1: 0
+    - _Saturation2: 0
+    - _Saturation3: 0
+    - _Spread: 0
+    - _TilingCrystals: 1
+    - _TilingLayer1: 1.5
+    - _TilingLayer2: 1
+    - _TilingLayer3: 1
+    - _TilingMask: 6
+    - __dirty: 0
+    m_Colors:
+    - _Brushposition: {r: -0.93491685, g: -0.44017673, b: 0, a: 0}
+    - _CiconiaStudioBlend2: {r: 1, g: 1, b: 1, a: 0}
+    - _CiconiaStudioSnow: {r: 1, g: 1, b: 1, a: 0}
+    - _CiconiaStudioStandardMultiLayer: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color2: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
+    - _Color3: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor2: {r: 0, g: 0, b: 0, a: 1}
+    - _LayerSelector: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecularColor1: {r: 1, g: 1, b: 1, a: 0}
+    - _SpecularColor2: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor3: {r: 1, g: 1, b: 1, a: 0}

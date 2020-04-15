@@ -1,0 +1,32 @@
+Readme - Shader Painter
+_________________________
+
+
+Documentation link : https://docs.google.com/document/d/11XjhskWyFUIbC-ziEICA5wo8_VK91Rdr8xgPLjdWHZo/edit?usp=sharing
+
+
+
+Scriptable render pipeline (SRP) :
+
+During the BETA phases the SRP shaders won't be integrated to the tool. To use the SRP shaders you will need to import them manually.
+
+Go to Ciconia Studio\Editor Extensions\Shader Painter\Resources\Shaders.
+Open Lightweight Renderer Shaders.rar and import the shaders. Simply replace with the existing ones. Delete the SpecGloss Shaders since they are not supported.
+Done!
+
+
+If you need to go back to the Built-in renderer just extract the shaders from the Built-In Renderer Shaders.rar folder.
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+Shader Painter is still in BETA. Not all features are available. The price will increase with every BETA update. Buy it now at a reduced price and save 50%.
+Any suggestions ? Help us shape this tool to your needs!
+
+
+Contact :
+
+If you have any questions, please feel free to contact us : contact@ciconia-studio.com
+
+More news on our work? Follow us on Twitter : twitter.com/CiconiaStudio
