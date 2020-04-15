@@ -37,14 +37,13 @@ public class Interactive_Manager : MonoBehaviour
             if (Physics.Raycast (ray,out hit,100.0f)) {
                 if (hit.transform.name == "G18") {
                     anim.SetBool("Taking an object ?", true);
-                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("Taking an object ?")){
-                        anim.SetBool("Taking an object ?", false);
-                    }
                 }
             }
         }
 
-
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Taking an object ?")){
+            anim.SetBool("Taking an object ?", false);
+        }
 
 
         // VISER AVEC UN PISTOL
