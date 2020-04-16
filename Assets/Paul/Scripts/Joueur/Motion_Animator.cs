@@ -13,6 +13,7 @@ public class Motion_Animator : MonoBehaviour
         
         anim.SetFloat("horizontal", Input.GetAxis("Horizontal"));
         anim.SetFloat("vertical", Input.GetAxis("Vertical"));
+        anim.SetFloat("rotationX", Input.GetAxis("Mouse X"));
 
     }
 }
