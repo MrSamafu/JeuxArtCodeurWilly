@@ -10,7 +10,7 @@ public class PlayerMotor : MonoBehaviour
     private bool isJumping = false;
     private float currentCameraRotationX = 0f;
     public float cameraRotationLimit = 85f;
-
+    public Transform torseBone;
     public Camera cam;
 
     private Rigidbody rb;
@@ -61,6 +61,8 @@ public class PlayerMotor : MonoBehaviour
         currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -cameraRotationLimit, cameraRotationLimit);
         //applique les changement à la camera après le clamp
         cam.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0f, 0f);
+
+        torseBone.localEulerAngles = new Vector3(0f, 0f, currentCameraRotationX);
         
     }
 
