@@ -3681,17 +3681,32 @@ PrefabInstance:
     - target: {fileID: 4837072140829207920, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.66
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4837072140829207920, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.46
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 4837072140829207920, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837072140829207920, guid: b365c53cafbd3064487d71a3b57da372,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837072140829207920, guid: b365c53cafbd3064487d71a3b57da372,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837072140829207920, guid: b365c53cafbd3064487d71a3b57da372,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 4837072140829207921, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
@@ -4391,7 +4406,7 @@ PrefabInstance:
     - target: {fileID: 7235695589113101172, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7235695589113101175, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
@@ -4416,7 +4431,7 @@ PrefabInstance:
     - target: {fileID: 7235695589113101178, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
       propertyPath: field of view
-      value: 54.043163
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7235695589113101178, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
@@ -4446,7 +4461,7 @@ PrefabInstance:
     - target: {fileID: 7235695589113101178, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
       propertyPath: near clip plane
-      value: 0.01
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7235695589113101178, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
@@ -4461,7 +4476,7 @@ PrefabInstance:
     - target: {fileID: 7235695589228463122, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
       propertyPath: cameraRotationLimit
-      value: 70
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7235695589228463123, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
@@ -4471,7 +4486,7 @@ PrefabInstance:
     - target: {fileID: 7235695589228463123, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 3.058
       objectReference: {fileID: 0}
     - target: {fileID: 7235695589228463123, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
@@ -4517,6 +4532,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7235695589228463148, guid: b365c53cafbd3064487d71a3b57da372,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.957037
+      objectReference: {fileID: 0}
+    - target: {fileID: 7235695589228463148, guid: b365c53cafbd3064487d71a3b57da372,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.99191856
       objectReference: {fileID: 0}
     - target: {fileID: 7235695589228463149, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
@@ -4731,7 +4756,7 @@ PrefabInstance:
     - target: {fileID: 8033106631173174571, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.95
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8127998430582497658, guid: b365c53cafbd3064487d71a3b57da372,
         type: 3}
