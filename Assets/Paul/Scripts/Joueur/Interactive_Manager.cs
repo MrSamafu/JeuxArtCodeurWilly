@@ -12,11 +12,10 @@ public class Interactive_Manager : MonoBehaviour
     public Cinemachine.CinemachineVirtualCamera CameraInventory;
     public bool isInInventory = false;
 
-
     void Start(){
         
         //COMPONENTS
-        anim = GetComponentInChildren<Animator> ();
+        anim = GetComponentInChildren<Animator>();
 
         //CURSOR
         Cursor.visible = true;
@@ -48,20 +47,37 @@ public class Interactive_Manager : MonoBehaviour
 
         }
 
+
+        //----------------INVENTAIRE--------------------------
         if (Input.GetButtonDown("Inventory")){
             if(isInInventory == false){ 
                 CameraInventory.Priority = 1001;
+                Cursor.visible = true;
+                Screen.lockCursor = false;
                 isInInventory = true;
+                anim.SetBool("Is In Inventory ?", true);
+            }else if(isInInventory == true){ 
+                isInInventory = false;
+                anim.SetBool("Is In Inventory ?", false);
+                CameraInventory.Priority = 1;
+                Cursor.visible = false;
+                Screen.lockCursor = true;
             }
         }
-
 
         if (Input.GetButtonDown("Cancel")){ 
             if(isInInventory == true){ 
                 isInInventory = false;
+                anim.SetBool("Is In Inventory ?", false);
                 CameraInventory.Priority = 1;
+                Cursor.visible = false;
+                Screen.lockCursor = true;
             }
         }
+        //-----------FIN INVENTAIRE--------------------------
+
+
+
 
 
         // VISER AVEC UN PISTOL
