@@ -136,7 +136,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &109205757
 Transform:
@@ -1778,9 +1778,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6315904349435184676, guid: cd281357a9d9ce14dad06135b9976dfe,
         type: 3}
+      propertyPath: views.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315904349435184676, guid: cd281357a9d9ce14dad06135b9976dfe,
+        type: 3}
       propertyPath: Camera
       value: 
       objectReference: {fileID: 1682871544}
+    - target: {fileID: 6315904349435184676, guid: cd281357a9d9ce14dad06135b9976dfe,
+        type: 3}
+      propertyPath: views.Array.data[0]
+      value: 
+      objectReference: {fileID: 2831323490228940979}
+    - target: {fileID: 6315904349435184676, guid: cd281357a9d9ce14dad06135b9976dfe,
+        type: 3}
+      propertyPath: views.Array.data[1]
+      value: 
+      objectReference: {fileID: 109205757}
+    - target: {fileID: 6315904349435184676, guid: cd281357a9d9ce14dad06135b9976dfe,
+        type: 3}
+      propertyPath: transitionSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6331628069442670698, guid: cd281357a9d9ce14dad06135b9976dfe,
         type: 3}
       propertyPath: m_LocalRotation.x
