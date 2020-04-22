@@ -11,7 +11,7 @@ public class PlayerMotor : MonoBehaviour
     private float currentCameraRotationX = 0f;
     public float cameraRotationLimit = 85f;
     public Transform torseBone;
-    public Camera cam;
+    public Cinemachine.CinemachineVirtualCamera cam;
 
     private Rigidbody rb;
 
