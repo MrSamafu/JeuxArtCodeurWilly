@@ -11,14 +11,14 @@ public class GroundChecker : MonoBehaviour//détermine si le personne touche un 
     {
         checker = GetComponentInParent<PlayerController>();
 
-
     }
+
     public void OnTriggerStay(Collider other)
     {
-        
         isGrounded = true;
         checker.ToucheFloor(isGrounded);
     }
+
     public void OnTriggerExit(Collider other)
     {
         
