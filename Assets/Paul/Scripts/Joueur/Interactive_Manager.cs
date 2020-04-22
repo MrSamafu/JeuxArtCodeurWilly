@@ -32,7 +32,7 @@ public class Interactive_Manager : MonoBehaviour
 
     void Update(){
         
-
+        anim.SetFloat("horizontal", Input.GetAxisRaw("Horizontal"));
 
         if (Input.GetButtonDown("Use")){ 
             RaycastHit hit; 
