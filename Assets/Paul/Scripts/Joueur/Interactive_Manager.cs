@@ -8,8 +8,9 @@ public class Interactive_Manager : MonoBehaviour
     Animator anim;
     public Camera Camera;
 
-
-
+    public Cinemachine.CinemachineVirtualCamera MainFPSCamera;
+    public Cinemachine.CinemachineVirtualCamera CameraInventory;
+    public bool isInInventory = false;
 
 
     void Start(){
@@ -47,7 +48,20 @@ public class Interactive_Manager : MonoBehaviour
 
         }
 
+        if (Input.GetButtonDown("Inventory")){
+            if(isInInventory == false){ 
+                CameraInventory.Priority = 1001;
+                isInInventory = true;
+            }
+        }
 
+
+        if (Input.GetButtonDown("Cancel")){ 
+            if(isInInventory == true){ 
+                isInInventory = false;
+                CameraInventory.Priority = 1;
+            }
+        }
 
 
         // VISER AVEC UN PISTOL
