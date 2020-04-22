@@ -12,6 +12,11 @@ public class Interactive_Manager : MonoBehaviour
     public Cinemachine.CinemachineVirtualCamera CameraInventory;
     public bool isInInventory = false;
 
+    public GameObject GrabbedObj;
+    public Transform grabPos;
+    public bool endGrabbedObject;
+    public GameObject HandLeft;
+
     void Start(){
         
         //COMPONENTS
@@ -32,20 +37,44 @@ public class Interactive_Manager : MonoBehaviour
 
     void Update(){
         
+
         anim.SetFloat("horizontal", Input.GetAxisRaw("Horizontal"));
 
+
+
+        //-------------INTERACTION RAMASSAGE D'OBJET-----------------
         if (Input.GetButtonDown("Use")){ 
             RaycastHit hit; 
             Ray ray = Camera.ScreenPointToRay(Input.mousePosition); 
             if (Physics.Raycast (ray, out hit, 100.0f)) {
-                if (hit.transform.name == "G18") {
+                if (hit.transform.tag == "Pistol") {
+                    endGrabbedObject = false;
+                    
+                    GrabbedObj = hit.transform.gameObject;
+                    GrabbedObj.GetComponent<BoxCollider>().enabled = false;
+                    GrabbedObj.GetComponent<Rigidbody>().useGravity = false;
+                    GrabbedObj.transform.position = new Vector3(0, 0, 0);
+                    GrabbedObj.transform.rotation = Quaternion.Euler(0,0,0);
+                    GrabbedObj.transform.localScale = new Vector3(1, 1, 1);
+                    GrabbedObj.transform.SetParent(grabPos.transform, false);
                     anim.SetBool("Taking an object ?", true);
                     StartCoroutine(WaitAnimGrabeObject());
-                    Destroy(hit.transform.gameObject);
                 }
             }
+        }
+        if(endGrabbedObject == true){
+
+            GrabbedObj = null;
 
         }
+
+
+        if(GrabbedObj){
+
+        //        GrabbedObj.transform.rotation = Quaternion.RotateTowards(GrabbedObj.transform.rotation, grabPos.rotation, 2.5F * Time.deltaTime);
+        
+        }
+
 
 
         //----------------INVENTAIRE--------------------------
@@ -99,8 +128,11 @@ public class Interactive_Manager : MonoBehaviour
 
 
     IEnumerator WaitAnimGrabeObject(){
+
         yield return new WaitForSeconds(4);
         anim.SetBool("Taking an object ?", false);
+        endGrabbedObject = true;
+        Destroy(GrabbedObj);
     }
 
 
