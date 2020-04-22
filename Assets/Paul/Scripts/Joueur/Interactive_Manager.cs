@@ -9,6 +9,9 @@ public class Interactive_Manager : MonoBehaviour
     public Camera Camera;
 
 
+
+
+
     void Start(){
         
         //COMPONENTS
@@ -34,16 +37,17 @@ public class Interactive_Manager : MonoBehaviour
         if (Input.GetButtonDown("Use")){ 
             RaycastHit hit; 
             Ray ray = Camera.ScreenPointToRay(Input.mousePosition); 
-            if (Physics.Raycast (ray,out hit,100.0f)) {
+            if (Physics.Raycast (ray, out hit, 100.0f)) {
                 if (hit.transform.name == "G18") {
                     anim.SetBool("Taking an object ?", true);
+                    StartCoroutine(WaitAnimGrabeObject());
+                    Destroy(hit.transform.gameObject);
                 }
             }
+
         }
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Taking an object ?")){
-            anim.SetBool("Taking an object ?", false);
-        }
+
 
 
         // VISER AVEC UN PISTOL
@@ -61,9 +65,16 @@ public class Interactive_Manager : MonoBehaviour
 
 
 
-
-
     }
+
+
+    IEnumerator WaitAnimGrabeObject(){
+        yield return new WaitForSeconds(4);
+        anim.SetBool("Taking an object ?", false);
+    }
+
+
+
 
 
 }
