@@ -44,9 +44,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.12049157
-  m_TransitionOffset: 0.006872636
-  m_ExitTime: 0.19278674
+  m_TransitionDuration: 0.120491564
+  m_TransitionOffset: 0.034158614
+  m_ExitTime: 0.19278678
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -829,6 +829,18 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
+    m_Name: Moving
+    m_StateMachine: {fileID: 1670918958970943568}
+    m_Mask: {fileID: 31900000, guid: 60b08a7881b905347a668ffcc3638441, type: 2}
+    m_Motions: []
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: -1
+    m_DefaultWeight: 1
+    m_IKPass: 1
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
+  - serializedVersion: 5
     m_Name: Inventory
     m_StateMachine: {fileID: 8914899084881317356}
     m_Mask: {fileID: 31900000, guid: 9953bcca52fa64041b1c18d709635127, type: 2}
@@ -844,18 +856,6 @@ AnimatorController:
     m_Name: strafe walking
     m_StateMachine: {fileID: -2281557967669127623}
     m_Mask: {fileID: 31900000, guid: 8f36070fb45e1a643b6aac1e421768eb, type: 2}
-    m_Motions: []
-    m_Behaviours: []
-    m_BlendingMode: 0
-    m_SyncedLayerIndex: -1
-    m_DefaultWeight: 1
-    m_IKPass: 1
-    m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 9100000}
-  - serializedVersion: 5
-    m_Name: Moving
-    m_StateMachine: {fileID: 1670918958970943568}
-    m_Mask: {fileID: 31900000, guid: 60b08a7881b905347a668ffcc3638441, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0

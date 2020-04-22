@@ -129,7 +129,7 @@ public class Interactive_Manager : MonoBehaviour
 
     IEnumerator WaitAnimGrabeObject(){
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3.5F);
         anim.SetBool("Taking an object ?", false);
         endGrabbedObject = true;
         Destroy(GrabbedObj);
