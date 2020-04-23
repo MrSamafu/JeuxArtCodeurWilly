@@ -163,13 +163,13 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New State
-  m_Speed: 1
+  m_Speed: 20
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8608539847760944775}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -829,6 +829,18 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
+    m_Name: Inventory
+    m_StateMachine: {fileID: 8914899084881317356}
+    m_Mask: {fileID: 31900000, guid: 9953bcca52fa64041b1c18d709635127, type: 2}
+    m_Motions: []
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: -1
+    m_DefaultWeight: 1
+    m_IKPass: 1
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
+  - serializedVersion: 5
     m_Name: Moving
     m_StateMachine: {fileID: 1670918958970943568}
     m_Mask: {fileID: 31900000, guid: 60b08a7881b905347a668ffcc3638441, type: 2}
@@ -841,15 +853,15 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: Inventory
-    m_StateMachine: {fileID: 8914899084881317356}
-    m_Mask: {fileID: 31900000, guid: 9953bcca52fa64041b1c18d709635127, type: 2}
+    m_Name: Jump
+    m_StateMachine: {fileID: 8229035385739004048}
+    m_Mask: {fileID: 31900000, guid: 1019f7a3fad1d52479532c94816ac264, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
     m_DefaultWeight: 1
-    m_IKPass: 1
+    m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
@@ -901,18 +913,6 @@ AnimatorController:
     m_SyncedLayerIndex: -1
     m_DefaultWeight: 1
     m_IKPass: 1
-    m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 9100000}
-  - serializedVersion: 5
-    m_Name: Jump
-    m_StateMachine: {fileID: 8229035385739004048}
-    m_Mask: {fileID: 31900000, guid: 1019f7a3fad1d52479532c94816ac264, type: 2}
-    m_Motions: []
-    m_Behaviours: []
-    m_BlendingMode: 0
-    m_SyncedLayerIndex: -1
-    m_DefaultWeight: 1
-    m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
 --- !u!1101 &51067720102880441
@@ -1245,7 +1245,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.15155554
+  m_TransitionDuration: 0.09392452
   m_TransitionOffset: 0
   m_ExitTime: 0.91869974
   m_HasExitTime: 1

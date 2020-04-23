@@ -47,10 +47,16 @@ public class Interactive_Manager : MonoBehaviour
             RaycastHit hit; 
             Ray ray = Camera.ScreenPointToRay(Input.mousePosition); 
             if (Physics.Raycast (ray, out hit, 100.0f)) {
-                if (hit.transform.tag == "Pistol") {
+                if (hit.transform.tag == "Item") {
+
+
                     endGrabbedObject = false;
                     
                     GrabbedObj = hit.transform.gameObject;
+
+                    Item item = GrabbedObj.GetComponent<Item>();
+                    
+
                     GrabbedObj.GetComponent<BoxCollider>().enabled = false;
                     GrabbedObj.GetComponent<Rigidbody>().useGravity = false;
                     GrabbedObj.transform.position = new Vector3(0, 0, 0);
@@ -59,6 +65,8 @@ public class Interactive_Manager : MonoBehaviour
                     GrabbedObj.transform.SetParent(grabPos.transform, false);
                     anim.SetBool("Taking an object ?", true);
                     StartCoroutine(WaitAnimGrabeObject());
+
+
                 }
             }
         }
@@ -132,7 +140,8 @@ public class Interactive_Manager : MonoBehaviour
         yield return new WaitForSeconds(3.5F);
         anim.SetBool("Taking an object ?", false);
         endGrabbedObject = true;
-        Destroy(GrabbedObj);
+        Item item = GrabbedObj.GetComponent<Item>();
+        this.GetComponent<Inventory>().AddItem(GrabbedObj, item.ID, item.type, item.description, item.icon);
     }
 
 
