@@ -2208,6 +2208,9 @@ GameObject:
   m_Component:
   - component: {fileID: 400000}
   - component: {fileID: 11100000}
+  - component: {fileID: 6397225568109193652}
+  - component: {fileID: 8571129292602621530}
+  - component: {fileID: 3940419672743106946}
   m_Layer: 0
   m_Name: Sheep
   m_TagString: Untagged
@@ -2252,3 +2255,42 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!65 &6397225568109193652
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.68294513, y: 1.2657666, z: 1.3263797}
+  m_Center: {x: -0.01398775, y: 0.65509176, z: -0.19116436}
+--- !u!65 &8571129292602621530
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.501105, y: 0.88343585, z: 0.27263767}
+  m_Center: {x: -0.002331257, y: 0.9768092, z: 0.61545515}
+--- !u!65 &3940419672743106946
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25865102, y: 0.41251564, z: 0.17938562}
+  m_Center: {x: 0.0069938344, y: 1.2169318, z: 0.8439125}
