@@ -7,7 +7,8 @@ public class IdleToCrouch : MonoBehaviour
 
     public Animator animator;
     float InputX;
-    public float InputY;
+    float InputY;
+
 
     void Start()
     {
@@ -15,10 +16,18 @@ public class IdleToCrouch : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update(){
+    private void Update(){
         InputY = Input.GetAxis("Vertical");
         InputX = Input.GetAxis("Horizontal");
-        animator.SetFloat("InputX", InputX);
-        animator.SetFloat("InputY", InputY);
+
+        if (Input.GetButton("Crouch")){
+
+            animator.SetBool("Crouch", true);
+
+        }else{
+            animator.SetBool("Crouch", false);
+        }
+
+
     }
 }
