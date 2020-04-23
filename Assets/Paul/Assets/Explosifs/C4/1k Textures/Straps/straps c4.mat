@@ -8,14 +8,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: straps c4
-  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
-    _SPECGLOSSMAP _SPECULARHIGHLIGHTS_OFF
-  m_LightmapFlags: 4
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION _GLOSSYREFLECTIONS_OFF _METALLICGLOSSMAP
+    _NORMALMAP _PARALLAXMAP _SPECGLOSSMAP _SPECULARHIGHLIGHTS_OFF
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -65,7 +66,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: e1d0cbf46f3f03f43970ad178382836c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4b8addcba59bd9248b7b9486ade018ac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicRoughA2:
@@ -77,7 +78,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 4b8addcba59bd9248b7b9486ade018ac, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -104,26 +105,26 @@ Material:
     - _Desaturation1: 0
     - _Desaturation2: 0
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EmissiveIntensity1: 1
     - _EmissiveIntensity2: 1
     - _Erase: 0
     - _FresnelStrength: 0
-    - _GlossMapScale: 0
+    - _GlossMapScale: 0.711
     - _Glossiness: 0.566
     - _GlossyReflections: 0
     - _Heightmapcontstraintbymask: 0
     - _MaskOpacity: 1
     - _Metallic: 0
     - _Metallic2: 0.2
-    - _Mode: 0
+    - _Mode: 3
     - _NormalBlend: 0
     - _NormalIntensity1: 1
     - _NormalIntensity2: 1
     - _OcclusionStrength: 0
     - _Opacity: 1
     - _OpacityDepth: 1
-    - _Parallax: 0.0204
+    - _Parallax: 0.0531
     - _Pensize: 0
     - _Rotate: 0
     - _Roughness2: 0.5
@@ -136,14 +137,14 @@ Material:
     - _TilingLayer1: 1
     - _TilingLayer2: 1
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     - __dirty: 1
     m_Colors:
     - _Brushposition: {r: 0, g: 0, b: 0, a: 0}
     - _CiconiaStudioBlend2: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color2: {r: 1, g: 1, b: 1, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
     - _EmissionColor2: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SpecularColor1: {r: 1, g: 1, b: 1, a: 0}
