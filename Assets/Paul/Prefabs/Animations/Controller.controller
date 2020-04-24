@@ -518,7 +518,8 @@ BlendTree:
     m_DirectBlendParameter: vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: b69fa3406754ab14e8ca2ebb02d4a378, type: 2}
+    m_Motion: {fileID: -203655887218126122, guid: cf37991d43eb44449904212b6d073d86,
+      type: 3}
     m_Threshold: 0
     m_Position: {x: 0.3, y: 0}
     m_TimeScale: 1
@@ -526,7 +527,8 @@ BlendTree:
     m_DirectBlendParameter: vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: b69fa3406754ab14e8ca2ebb02d4a378, type: 2}
+    m_Motion: {fileID: -203655887218126122, guid: cf37991d43eb44449904212b6d073d86,
+      type: 3}
     m_Threshold: 1
     m_Position: {x: -0.3, y: 0}
     m_TimeScale: -1
@@ -681,6 +683,18 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: Jump
     m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: FootstepLeft
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: FootstepRight
+    m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0

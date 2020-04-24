@@ -1,11 +1,13 @@
-﻿
+﻿//Marshall Heffernan aka itsmars 2015
+//Special thanks to Duck, TheKusabi, alucardj, dorpeleg, TonyLi & superpig on the Unity Forums!
 
-//1) Add two floats to your Animator Controller. "FootstepLeft" and "FootstepRight".
-//2) Add a CURVE to each footstep animation. See video tutorial for a better explaination.
-//3) Tag your Terrain GameObject with "Terrain".
-//4) Tag your Non-Terrain GameObject floors with their respective names (for example, a wooden floor would need the tag "Surface_Wood").
+//This is the ANIMATION EVENT version of my Footstep script. For this to work, you'll first need to...
 
+//1) Add an ANIMATION EVENT to your movement animations, called "FootstepLeft" and "FootstepRight" when your feet touch the ground.
+//2) Tag your Terrain GameObject with "Terrain".
+//3) Tag your Non-Terrain GameObject floors with their respective names (for example, a wooden floor would need the tag "Surface_Wood").
 
+//Watch the video tutorial! https://www.youtube.com/watch?v=ISoBKFxQLic
 
 using UnityEngine;
 using System.Collections;
@@ -13,27 +15,21 @@ using System.Collections;
 [RequireComponent (typeof (AudioSource))]
 	//This will add an Audio Source component if you don't have one.
 
-public class FootSteps : MonoBehaviour {
+public class FootstepMaster_Events : MonoBehaviour {
 
 	private GameObject terrainFinder;	//Stores the Terrain GameObject out of the Scene for use later.
 	private Terrain terrain;			//Your Terrain (if one's in your scene)
 	private TerrainData terrainData;	//Lets us get to the Terrain's splatmap.
 	private Vector3 terrainPos;			//Where are we on the Splatmap?
 	public static int surfaceIndex = 0;	//The order in which your textures were added to your Terrain.
-	private string whatTexture;  		//Holds the FILENAMEs of the Textures in your Terrain.
+	private string whatTexture;    		//Holds the FILENAMEs of the Textures in your Terrain.
 
 	private AudioSource mySound;		//The AudioSource component
-	private Animator anim;				//Lets us pull floats out of our Animator's curves.
 	public static GameObject floor;		//what are we standing on?
 	private string currentFoot;			//Each foot does it's own Raycast
 
-	private float currentFrameFootstepLeft;
-	private float currentFrameFootstepRight;
-	private float lastFrameFootstepLeft;
-	private float lastFrameFootstepRight;
-
 	//-----------------------------------------------------------------------------------------
-
+	
 	[Space(5.0f)]
 	private float currentVolume;
 	[Range(0.0f,1.0f)]
@@ -63,7 +59,7 @@ public class FootSteps : MonoBehaviour {
 	public bool instantiatedFX;		//Check this checkbox in the inspector if you want your FX to be instantiated.
 	[Tooltip("Choose ONE")]
 	public bool toggledFX;			//Check this checkbox in the inspector if you want your FX to be enabled.
-
+	
 	[Space(5.0f)]
 	public GameObject dirtFX;
 	public GameObject snowFX;
@@ -79,7 +75,6 @@ public class FootSteps : MonoBehaviour {
 
 	//Start
 	void Start () {
-		anim = GetComponentInChildren<Animator>();
 		mySound = gameObject.GetComponent<AudioSource>();
 		terrainFinder = GameObject.FindGameObjectWithTag ("Terrain");
 
@@ -113,45 +108,9 @@ public class FootSteps : MonoBehaviour {
 			waterFX.transform.rotation = waterRotation;
 			waterFX.transform.position = waterPos;
 		}
-
-	//-----------------------------------------------------------------------------------------
-
-		//Check THIS FRAME to see if we need to play a sound for the left foot, RIGHT NOW...
-		currentFrameFootstepLeft = anim.GetFloat ("FootstepLeft");		//get left foot's CURVE FLOAT from the Animator Controller, from the LAST FRAME.
-		if (currentFrameFootstepLeft > 0 && lastFrameFootstepLeft < 0) {		//is this frame's curve BIGGER than the last frames?
-				RaycastHit surfaceHitLeft;
-				Ray aboveLeftFoot = new Ray (leftFoot.transform.position + new Vector3 (0, 1.5f, 0), Vector3.down);
-				LayerMask layerMask = ~(1 << 18) | (1 << 19); 	//Here we ignore layer 18 and 19 (Player and NPCs). We want the raycast to hit the ground, not people.
-				if (Physics.Raycast (aboveLeftFoot, out surfaceHitLeft, 2f, layerMask)) {
-					floor = (surfaceHitLeft.transform.gameObject);
-					currentFoot = "Left";				//This will help us place the Instantiated or Toggled FX at the correct position.
-					if (floor != null) {
-						Invoke ("CheckTexture", 0);		//Play LEFT FOOTSTEP
-					}
-				}
-			}
-		lastFrameFootstepLeft = anim.GetFloat ("FootstepLeft");	//get left foot's CURVE FLOAT from the Animator Controller, from the CURRENT FRAME.
-
-	//-----------------------------------------------------------------------------------------
-
-			//Check THIS FRAME to see if we need to play a sound for the right foot, RIGHT NOW...
-		currentFrameFootstepRight = anim.GetFloat ("FootstepRight");	//get right foot's CURVE FLOAT from the Animator Controller, from the LAST FRAME.
-			if (currentFrameFootstepRight < 0 && lastFrameFootstepRight > 0) {		//is this frame's curve SMALLER than last frames?
-				RaycastHit surfaceHitRight;
-				Ray aboveRightFoot = new Ray (rightFoot.transform.position + new Vector3 (0, 1.5f, 0), Vector3.down);
-				LayerMask layerMask = ~(1 << 18) | (1 << 19); 	//Here we ignore layer 18 and 19 (Player and NPCs). We want the raycast to hit the ground, not people.
-				if (Physics.Raycast (aboveRightFoot, out surfaceHitRight, 2f, layerMask)) {
-					floor = (surfaceHitRight.transform.gameObject);
-					currentFoot = "Right";				//This will help us place the Instantiated or Toggled FX at the correct position.
-					if (floor != null) {
-						Invoke ("CheckTexture", 0);		//Play RIGHT FOOTSTEP
-					}
-				}
-			}																																		//???????????????????????????????????????????????????????
-		lastFrameFootstepRight = anim.GetFloat ("FootstepRight");	//get right foot's CURVE FLOAT from the Animator Controller, from the CURRENT FRAME.
 	} //END OF UPDATE
-	
-	//----------------------------------------------------------------------------------------
+
+	//-----------------------------------------------------------------------------------------
 	
 	//Puts ALL TEXTURES from the Terrain into an array, represented by floats (0=first texture, 1=second texture, etc).
 	private float[] GetTextureMix(Vector3 WorldPos){
@@ -182,6 +141,38 @@ public class FootSteps : MonoBehaviour {
 			}return maxIndex;
 		} else return 0;	//THERE'S NO TERRAIN IN THE SCENE! DON'T DO THE ABOVE STUFF.
 	}
+
+	//-----------------------------------------------------------------------------------------
+
+	//You'll be calling this Method/Function ("FootstepLeft") from an Animation Event when your Left foot touches the ground.
+	void FootstepLeft() {
+		RaycastHit surfaceHitLeft;
+		Ray aboveLeftFoot = new Ray (leftFoot.transform.position + new Vector3(0,1.5f,0), Vector3.down);
+		LayerMask layerMask = ~(1 << 18) | (1 << 19); 	//Here we ignore layer 18 and 19 (Player and NPCs). We want the raycast to hit the ground, not people.
+		if (Physics.Raycast (aboveLeftFoot, out surfaceHitLeft, 2f, layerMask)) {
+			floor = (surfaceHitLeft.transform.gameObject);
+//			Debug.DrawRay (aboveLeftFoot.origin, Vector3.down * 1.5f, Color.green, 2, false);
+		}
+		currentFoot = "Left";				//This will help us place the Instantiated or Toggled FX at the correct position.
+		if (floor != null) {	
+			Invoke ("CheckTexture", 0);
+		}
+	}
+
+	//You'll be calling this Method/Function ("FootstepRight") from an Animation Event when your Right foot touches the ground.
+	void FootstepRight(){
+		RaycastHit surfaceHitRight;
+		Ray aboveRightFoot = new Ray (rightFoot.transform.position + new Vector3(0,1.5f,0), Vector3.down);
+		LayerMask layerMask = ~(1 << 18) | (1 << 19); 	//Here we ignore layer 18 and 19 (Player and NPCs). We want the raycast to hit the ground, not people.
+		if (Physics.Raycast (aboveRightFoot, out surfaceHitRight, 2f, layerMask)) {
+			floor = (surfaceHitRight.transform.gameObject);
+//			Debug.DrawRay (aboveRightFoot.origin, Vector3.down * 1.5f, Color.green, 2, false);
+		}
+		currentFoot = "Right";				//This will help us place the Instantiated or Toggled FX at the correct position.
+		if (floor != null) {	
+			Invoke ("CheckTexture", 0);
+		}
+	}
 	
 	//-----------------------------------------------------------------------------------------
 	
@@ -194,7 +185,7 @@ public class FootSteps : MonoBehaviour {
 		if (floor.tag == ("Surface_Leaves"))
 			Invoke ("PlayLeaves", 0);
 		if (floor.tag == ("Surface_Dirt"))
-			Invoke ("PlayDirt", 0);	
+			Invoke ("PlayDirt", 0);
 		if (floor.tag == ("Surface_Gravel"))
 			Invoke ("PlayGravel", 0);
 		if (floor.tag == ("Surface_Stone"))
@@ -212,7 +203,7 @@ public class FootSteps : MonoBehaviour {
 		if (floor.tag == ("Terrain")) {
 			//Now we'll check to see if the player just stepped on a Terrain. TAG YOUR TERRAIN with "Terrain".
 			//Feel free to make your own sound categories.
-							
+			
 			//This is the coolest part; We check the TEXTURE NAME in your Project folder, then "Invoke" the corresponding Function/Method.
 			//We'll check for UpperCase, lowercase and ALL CAPS filenames. The "keyword" can appear anywhere in the title!
 			//For example, if you had a texture called "medieval_grass_brown" it would "invoke" a sound from the grass array.
@@ -236,18 +227,18 @@ public class FootSteps : MonoBehaviour {
 			else if (whatTexture.Contains ("water") == true || whatTexture.Contains ("Water") == true|| whatTexture.Contains ("WATER") == true)
 				Invoke ("PlayWater", 0);
 			else Invoke ("PlayDefault", 0);
-				}
-			}
+		}
+	}
 
 	//-----------------------------------------------------------------------------------------
 
 	//INVOKED FUNCTIONS BELOW. Plays a Random sound from an array at a varied pitch and volume.
-
+	
 	//I've included support for three FX Prefabs below (a dust cloud for dirt, white puffs for snow and splashes for water). Feel free to add more.
-
+	
 	//If you're Instantiating your FX, make sure it has a script to delete itself after a while, to keep your Hierarchy clean. Drag the prefab into the inspector FROM YOUR PROJECT WINDOW.
 	//If you're Toggling your FX, just make sure it's a short enough particle system so that it won't look wierd when it turns off, abruptly. Drag the FX into the inspector FROM YOUR PLAYER.
-	
+
 	void PlayGrass(){
 		currentVolume = (volume + UnityEngine.Random.Range(-volumeVariance, volumeVariance));
 		pitch = (1.0f + Random.Range(-pitchVariance, pitchVariance));
@@ -310,8 +301,8 @@ public class FootSteps : MonoBehaviour {
 		if (gravel.Length > 0) {
 			mySound.PlayOneShot (gravel [Random.Range (0, gravel.Length)], currentVolume);
 		} else Debug.LogError ("trying to play gravel sound, but no gravel sounds in array!");
-		}
-
+	}
+	
 	void PlayStone(){
 		currentVolume = (volume + UnityEngine.Random.Range(-volumeVariance, volumeVariance));
 		pitch = (1.0f + Random.Range(-pitchVariance, pitchVariance));
@@ -329,7 +320,7 @@ public class FootSteps : MonoBehaviour {
 			mySound.PlayOneShot (wood [Random.Range (0, wood.Length)], currentVolume);
 		} else Debug.LogError ("trying to play wood sound, but no wood sounds in array!");
 	}
-
+	
 	void PlayMetal(){
 		currentVolume = (volume + UnityEngine.Random.Range(-volumeVariance, volumeVariance));
 		pitch = (1.0f + Random.Range(-pitchVariance, pitchVariance));
@@ -347,7 +338,7 @@ public class FootSteps : MonoBehaviour {
 			mySound.PlayOneShot (defaults [Random.Range (0, defaults.Length)], currentVolume);
 		} else Debug.LogError ("trying to play the default sound, but no default sounds in array!");
 	}
-
+	
 	void PlaySnow(){		//Supports toggling or instantiating a "snowFX" AT THE PLAYER'S CURRENT FOOT which could be a white poofy particle system, or something...
 		currentVolume = (volume + UnityEngine.Random.Range(-volumeVariance, volumeVariance));
 		pitch = (1.0f + Random.Range(-pitchVariance, pitchVariance));
@@ -385,7 +376,7 @@ public class FootSteps : MonoBehaviour {
 			}
 		}
 	}
-
+	
 	void PlayWater(){		//Supports toggling or instantiating a "waterFX" AT THE SURFACE OF THE WATER, which could be a splashy particle system, or something...
 		currentVolume = (volume + UnityEngine.Random.Range(-volumeVariance, volumeVariance));
 		pitch = (1.0f + Random.Range(-pitchVariance, pitchVariance));

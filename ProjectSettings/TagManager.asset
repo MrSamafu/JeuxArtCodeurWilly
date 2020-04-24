@@ -8,6 +8,9 @@ TagManager:
   - Fire
   - Pistol
   - Item
+  - Terrain
+  - Surface_Defaults
+  - Surface_Stone
   layers:
   - Default
   - TransparentFX
