@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour
     private PlayerMotor motor;
     private bool isJumping = false;
     public float jumpForce = 300f;
-    private bool isGrounded;
-
+    public bool isGrounded;
     public GameObject groundChecker;
 
     Animator anim;

@@ -15,7 +15,7 @@ public class PlayerMotor : MonoBehaviour
 
     private Rigidbody rb;
 
-
+    public bool isWalking;
 
     private void Start()
     {
@@ -26,6 +26,7 @@ public class PlayerMotor : MonoBehaviour
     public void Move(Vector3 _velocity)
     {
         velocity = _velocity;
+
     }
 
 
@@ -39,7 +40,10 @@ public class PlayerMotor : MonoBehaviour
     private void PerformMovement(){
         if(velocity != Vector3.zero)
         {
+            isWalking = true;
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+        }else{
+            isWalking = false;
         }
         if(isJumping != false)
         {
