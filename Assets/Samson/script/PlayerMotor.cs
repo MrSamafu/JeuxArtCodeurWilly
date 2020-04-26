@@ -10,29 +10,40 @@ public class PlayerMotor : MonoBehaviour
     private bool isJumping = false;
     private float currentCameraRotationX = 0f;
     public float cameraRotationLimit = 85f;
-    public Transform torseBone;
+
     public Cinemachine.CinemachineVirtualCamera cam;
 
     private Rigidbody rb;
+
+    public bool isWalking;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
+
+
     public void Move(Vector3 _velocity)
     {
         velocity = _velocity;
+
     }
+
+
     private void FixedUpdate()
     {
         PerformMovement();
         PerformRotation();
     }
-    private void PerformMovement()
-    {
+
+
+    private void PerformMovement(){
         if(velocity != Vector3.zero)
         {
+            isWalking = true;
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+        }else{
+            isWalking = false;
         }
         if(isJumping != false)
         {
@@ -40,21 +51,26 @@ public class PlayerMotor : MonoBehaviour
             isJumping = false;
         }
     }
-    public void Rotate(Vector3 _rotation)
-    {
+
+
+    public void Rotate(Vector3 _rotation){
         rotation = _rotation;
     }
-    public void RotateCamera(float _cameraRotationX)
-    {
+
+
+    public void RotateCamera(float _cameraRotationX){
         cameraRotationX = _cameraRotationX;
     }
-    public void jump(float _jumpForce)
-    {
+
+
+    public void jump(float _jumpForce){
         jumpForce = _jumpForce;
         isJumping = true;
     }
-    private void PerformRotation()
-    {
+
+
+    private void PerformRotation(){
+
         //récupération de la rotation + clamp la rotation
         rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
         currentCameraRotationX -= cameraRotationX;
@@ -62,7 +78,6 @@ public class PlayerMotor : MonoBehaviour
         //applique les changement à la camera après le clamp
         cam.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0f, 0f);
 
-        torseBone.localEulerAngles = new Vector3(0f, 0f, currentCameraRotationX);
         
     }
 

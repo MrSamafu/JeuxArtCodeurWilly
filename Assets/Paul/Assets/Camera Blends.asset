@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CustomBlends:
   - m_From: Camera
-    m_To: Camera_GrabeObject
+    m_To: Camera_Head
     m_Blend:
       m_Style: 5
       m_Time: 0.2
-  - m_From: Camera_GrabeObject
+  - m_From: Camera_Head
     m_To: Camera
     m_Blend:
       m_Style: 1

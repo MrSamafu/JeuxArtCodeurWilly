@@ -58916,16 +58916,16 @@ AnimationClip:
         time: 0
         value: 1000
         inSlope: 0
-        outSlope: 0
+        outSlope: -145.63106
         tangentMode: 69
         weightedMode: 0
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
         time: 6.866667
-        value: 1000
-        inSlope: -0
-        outSlope: -1485.0004
+        value: 0
+        inSlope: -145.63106
+        outSlope: 15.000004
         tangentMode: 69
         weightedMode: 0
         inWeight: 0
@@ -58933,7 +58933,7 @@ AnimationClip:
       - serializedVersion: 3
         time: 7.5333333
         value: 10
-        inSlope: -1485.0004
+        inSlope: 15.000004
         outSlope: 0
         tangentMode: 69
         weightedMode: 0
@@ -58943,7 +58943,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Priority
-    path: root/hip/spine_01/spine_02/spine_03/neck/head/Camera_GrabeObject
+    path: root/hip/spine_01/spine_02/spine_03/neck/head/Camera_Head
     classID: 114
     script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_PPtrCurves: []
@@ -59641,7 +59641,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2881573428
+      path: 154011492
       attribute: 2492073993
       script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
       typeID: 114
@@ -118799,16 +118799,16 @@ AnimationClip:
         time: 0
         value: 1000
         inSlope: 0
-        outSlope: 0
+        outSlope: -145.63106
         tangentMode: 69
         weightedMode: 0
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
         time: 6.866667
-        value: 1000
-        inSlope: -0
-        outSlope: -1485.0004
+        value: 0
+        inSlope: -145.63106
+        outSlope: 15.000004
         tangentMode: 69
         weightedMode: 0
         inWeight: 0
@@ -118816,7 +118816,7 @@ AnimationClip:
       - serializedVersion: 3
         time: 7.5333333
         value: 10
-        inSlope: -1485.0004
+        inSlope: 15.000004
         outSlope: 0
         tangentMode: 69
         weightedMode: 0
@@ -118826,7 +118826,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Priority
-    path: root/hip/spine_01/spine_02/spine_03/neck/head/Camera_GrabeObject
+    path: root/hip/spine_01/spine_02/spine_03/neck/head/Camera_Head
     classID: 114
     script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_EulerEditorCurves: []
