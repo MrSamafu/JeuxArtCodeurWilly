@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Paul/Assets/Explosifs/Mine/Materials.meta
+guid: 715a042da69c08c4993a9b0fb2d83205
+=======
 guid: ca2d5c50f0876f2479520ab8eb945b07
+>>>>>>> a8d46aca14f7e2d97352227da0bb0fa1925d6e5b:Assets/Paul/Assets/Animaux/Sheep.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
