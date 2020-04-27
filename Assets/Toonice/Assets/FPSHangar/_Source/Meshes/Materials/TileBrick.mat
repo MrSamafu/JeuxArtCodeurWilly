@@ -163,7 +163,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AORemapMax: 1
+    - _AORemapMax: 0
     - _AORemapMin: 0
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
@@ -252,7 +252,7 @@ Material:
     - _SSRefractionProjectionModel: 0
     - _Shininess: 0.1942316
     - _Smoothness: 0.423
-    - _SmoothnessRemapMax: 0.423
+    - _SmoothnessRemapMax: 0
     - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularAAScreenSpaceVariance: 0.1
@@ -309,7 +309,7 @@ Material:
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _ReflectColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     - _SpecColor: {r: 0.27205884, g: 0.27205884, b: 0.27205884, a: 1}
-    - _SpecularColor: {r: 0.2720588, g: 0.2720588, b: 0.2720588, a: 1}
+    - _SpecularColor: {r: 0, g: 0, b: 0, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
