@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour
     private PlayerMotor motor;
     private bool isJumping = false;
     public float jumpForce = 300f;
-    private bool isGrounded;
-
+    public bool isGrounded;
     public GameObject groundChecker;
 
     Animator anim;
@@ -50,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isJumping == false && isGrounded == true)//fonction saut / uniquement si le personnage touche un sol
         {
-            anim.SetBool("Is Jumping ?", true);
+            anim.SetBool("Jump", true);
             isJumping = true;
             motor.jump(jumpForce);//envoie la valeur au PlayerMotor pour etre éxecuter
             isJumping = false;
@@ -62,7 +61,7 @@ public class PlayerController : MonoBehaviour
     }
      public void ToucheFloor(bool _isGrounded)
     {
-        anim.SetBool("Is Jumping ?", false);
+        anim.SetBool("Jump", false);
         isGrounded = _isGrounded;
 
     }

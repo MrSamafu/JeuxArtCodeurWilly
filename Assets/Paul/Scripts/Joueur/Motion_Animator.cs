@@ -5,15 +5,22 @@ using UnityEngine;
 public class Motion_Animator : MonoBehaviour
 {
 
-    public Animator anim;
+    Animator animator;
+    float InputX;
+    float InputY;
 
+    void Start()
+    {
+        animator = this.gameObject.GetComponentInChildren<Animator>();
+    }
 
     void Update()
     {
         
-        anim.SetFloat("horizontal", Input.GetAxis("Horizontal"));
-        anim.SetFloat("vertical", Input.GetAxis("Vertical"));
-        anim.SetFloat("rotationX", Input.GetAxis("Mouse X"));
+        InputY = Input.GetAxis("Vertical");
+        InputX = Input.GetAxis("Horizontal");
+        animator.SetFloat("InputX", InputX);
+        animator.SetFloat("InputY", InputY);
 
     }
 }

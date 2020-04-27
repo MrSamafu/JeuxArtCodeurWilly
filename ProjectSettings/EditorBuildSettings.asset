@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Samson/Labo.unity
     guid: 20339ba245b53b342857367db51dcdf9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Toonice/Labo.unity
     guid: 2eb3a497a03564544aabb0bd681f3fa2
   m_configObjects: {}
