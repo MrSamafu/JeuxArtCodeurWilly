@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Plugins.meta
+guid: b31e02689c79ca34d9ed50d928c40edb
+=======
 guid: a03642a8ff7a30b42bca6fe0626c4a9e
+>>>>>>> a8d46aca14f7e2d97352227da0bb0fa1925d6e5b:Assets/Paul/Assets/Animaux.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
