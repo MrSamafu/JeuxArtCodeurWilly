@@ -9,9 +9,10 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Terrain Material
   m_Shader: {fileID: 4800000, guid: eab0538d9d5746246806a9611c04ac4d, type: 3}
-  m_ShaderKeywords: _HEIGHTMAP1 _HEIGHTMAP2 _LAYEREDLIT_4_LAYERS _MASKMAP1 _MASKMAP2
-    _NORMALMAP1 _NORMALMAP2 _NORMALMAP_TANGENT_SPACE _NORMALMAP_TANGENT_SPACE0 _NORMALMAP_TANGENT_SPACE1
-    _NORMALMAP_TANGENT_SPACE2 _NORMALMAP_TANGENT_SPACE3
+  m_ShaderKeywords: _HEIGHTMAP1 _HEIGHTMAP2 _HEIGHTMAP3 _LAYEREDLIT_4_LAYERS _MASKMAP1
+    _MASKMAP2 _NORMALMAP1 _NORMALMAP2 _NORMALMAP3 _NORMALMAP_TANGENT_SPACE _NORMALMAP_TANGENT_SPACE0
+    _NORMALMAP_TANGENT_SPACE1 _NORMALMAP_TANGENT_SPACE2 _NORMALMAP_TANGENT_SPACE3
+    _TESSELLATION_PHONG
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -47,8 +48,8 @@ Material:
         m_Scale: {x: 350, y: 350}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap3:
-        m_Texture: {fileID: 2800000, guid: 174c80f78527d3e4eb072c0a77487b7c, type: 3}
-        m_Scale: {x: 120, y: 120}
+        m_Texture: {fileID: 2800000, guid: c4430b5c41a58354f94a6226f210453f, type: 3}
+        m_Scale: {x: 350, y: 350}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
@@ -139,7 +140,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap3:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 906cf2ee7f6de994c8abaa9ed8bbd811, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IridescenceMaskMap:
@@ -200,7 +201,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap3:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 059e9895867664640a230bbb1b1a1f5f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -364,7 +365,7 @@ Material:
     - _HeightAmplitude0: 0.02
     - _HeightAmplitude1: 0.02
     - _HeightAmplitude2: 0.02
-    - _HeightAmplitude3: 0.02
+    - _HeightAmplitude3: 1.5
     - _HeightCenter: 0.5
     - _HeightCenter0: 0.5
     - _HeightCenter1: 0.5
@@ -374,7 +375,7 @@ Material:
     - _HeightMapParametrization0: 0
     - _HeightMapParametrization1: 0
     - _HeightMapParametrization2: 0
-    - _HeightMapParametrization3: 0
+    - _HeightMapParametrization3: 1
     - _HeightMax: 1
     - _HeightMax0: 1
     - _HeightMax1: 1
@@ -399,7 +400,7 @@ Material:
     - _HeightTessAmplitude0: 2
     - _HeightTessAmplitude1: 2
     - _HeightTessAmplitude2: 2
-    - _HeightTessAmplitude3: 2
+    - _HeightTessAmplitude3: 150
     - _HeightTessCenter: 0.5
     - _HeightTessCenter0: 0.5
     - _HeightTessCenter1: 0.5
@@ -419,7 +420,7 @@ Material:
     - _InvTilingScale0: 0.008333334
     - _InvTilingScale1: 0.008333334
     - _InvTilingScale2: 0.0028571428
-    - _InvTilingScale3: 0.008333334
+    - _InvTilingScale3: 0.0028571428
     - _Ior: 1.5
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
@@ -495,11 +496,11 @@ Material:
     - _SupportDecals: 1
     - _SurfaceType: 0
     - _TessellationBackFaceCullEpsilon: -0.25
-    - _TessellationFactor: 4
+    - _TessellationFactor: 64
     - _TessellationFactorMaxDistance: 50
     - _TessellationFactorMinDistance: 20
-    - _TessellationFactorTriangleSize: 100
-    - _TessellationMode: 0
+    - _TessellationFactorTriangleSize: 10
+    - _TessellationMode: 1
     - _TessellationShapeFactor: 0.75
     - _TexWorldScale: 1
     - _TexWorldScale0: 1
@@ -547,9 +548,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor0: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor1: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor2: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor3: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor1: {r: 0.9254902, g: 0.9254902, b: 0.9254902, a: 1}
+    - _BaseColor2: {r: 0.9254902, g: 0.9254902, b: 0.9254902, a: 1}
+    - _BaseColor3: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
     - _BaseColorMap0_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
