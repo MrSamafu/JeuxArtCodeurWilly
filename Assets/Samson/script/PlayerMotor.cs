@@ -107,7 +107,7 @@ public class PlayerMotor : MonoBehaviour
     {
         if (other.gameObject.tag == "Ladder")
         {
-            rb.transform.Translate(transform.TransformDirection(Vector3.forward * direction / 2));
+            rb.transform.Translate(transform.TransformDirection(-velocity * direction/10));
             rb.useGravity = true;
             climb = false;
             
