@@ -11,6 +11,7 @@ TagManager:
   - Terrain
   - Surface_Defaults
   - Surface_Stone
+  - Ladder
   layers:
   - Default
   - TransparentFX
