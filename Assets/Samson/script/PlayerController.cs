@@ -43,9 +43,12 @@ public class PlayerController : MonoBehaviour
         float _cameraRotationX = _xRot * lookSensitivity;
 
         motor.RotateCamera(_cameraRotationX);
+        motor.directionClimb(_zMov);
 
 
-        
+
+
+
 
         if (Input.GetButtonDown("Jump") && isJumping == false && isGrounded == true)//fonction saut / uniquement si le personnage touche un sol
         {
@@ -65,5 +68,6 @@ public class PlayerController : MonoBehaviour
         isGrounded = _isGrounded;
 
     }
+    
 
 }
