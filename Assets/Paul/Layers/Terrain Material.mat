@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Terrain Material
   m_Shader: {fileID: 4800000, guid: eab0538d9d5746246806a9611c04ac4d, type: 3}
-  m_ShaderKeywords: _HEIGHTMAP1 _HEIGHTMAP2 _HEIGHTMAP3 _LAYEREDLIT_4_LAYERS _MASKMAP1
-    _MASKMAP2 _NORMALMAP1 _NORMALMAP2 _NORMALMAP3 _NORMALMAP_TANGENT_SPACE _NORMALMAP_TANGENT_SPACE0
+  m_ShaderKeywords: _HEIGHTMAP1 _LAYEREDLIT_4_LAYERS _MASKMAP1 _MASKMAP2 _MASKMAP3
+    _NORMALMAP1 _NORMALMAP2 _NORMALMAP3 _NORMALMAP_TANGENT_SPACE _NORMALMAP_TANGENT_SPACE0
     _NORMALMAP_TANGENT_SPACE1 _NORMALMAP_TANGENT_SPACE2 _NORMALMAP_TANGENT_SPACE3
     _TESSELLATION_PHONG
   m_LightmapFlags: 4
@@ -41,15 +41,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap1:
         m_Texture: {fileID: 2800000, guid: 4862a22905c415a44bc7dbb27b6ae04e, type: 3}
-        m_Scale: {x: 120, y: 120}
+        m_Scale: {x: 200, y: 200}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap2:
-        m_Texture: {fileID: 2800000, guid: b03264eb1e38d91478f233c5acb20228, type: 3}
-        m_Scale: {x: 350, y: 350}
+        m_Texture: {fileID: 2800000, guid: b7e07741a2da1aa4183448c4d0838870, type: 3}
+        m_Scale: {x: 200, y: 200}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap3:
-        m_Texture: {fileID: 2800000, guid: c4430b5c41a58354f94a6226f210453f, type: 3}
-        m_Scale: {x: 350, y: 350}
+        m_Texture: {fileID: 2800000, guid: 985102ed53cdaa646a79ebf156df8ba7, type: 3}
+        m_Scale: {x: 200, y: 200}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
@@ -136,11 +136,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap2:
-        m_Texture: {fileID: 2800000, guid: 8794d007b54223e4880cbc462c7e113c, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap3:
-        m_Texture: {fileID: 2800000, guid: 906cf2ee7f6de994c8abaa9ed8bbd811, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IridescenceMaskMap:
@@ -177,11 +177,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap2:
-        m_Texture: {fileID: 2800000, guid: 3712c661dd7ff9a47ac9f7acb6607132, type: 3}
+        m_Texture: {fileID: 2800000, guid: f4aa41799ff278a4583d38db9721a4a2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap3:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b768b00e232c8114fa507d98b9150e58, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -197,11 +197,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap2:
-        m_Texture: {fileID: 2800000, guid: 5ba6d9c01c1041c499ab995a045f7dda, type: 3}
+        m_Texture: {fileID: 2800000, guid: 12e2b006205aa6945815d4556cbebbb6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap3:
-        m_Texture: {fileID: 2800000, guid: 059e9895867664640a230bbb1b1a1f5f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 27e4e7a8f937a0046b55b1003023c443, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -284,13 +284,13 @@ Material:
     - _AORemapMax: 1
     - _AORemapMax0: 1
     - _AORemapMax1: 1
-    - _AORemapMax2: 1
+    - _AORemapMax2: 0.99999994
     - _AORemapMax3: 1
     - _AORemapMin: 0
     - _AORemapMin0: 0
-    - _AORemapMin1: 0
+    - _AORemapMin1: 0.77300805
     - _AORemapMin2: 0
-    - _AORemapMin3: 0
+    - _AORemapMin3: 1
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
@@ -365,7 +365,7 @@ Material:
     - _HeightAmplitude0: 0.02
     - _HeightAmplitude1: 0.02
     - _HeightAmplitude2: 0.02
-    - _HeightAmplitude3: 1.5
+    - _HeightAmplitude3: 0.02
     - _HeightCenter: 0.5
     - _HeightCenter0: 0.5
     - _HeightCenter1: 0.5
@@ -375,7 +375,7 @@ Material:
     - _HeightMapParametrization0: 0
     - _HeightMapParametrization1: 0
     - _HeightMapParametrization2: 0
-    - _HeightMapParametrization3: 1
+    - _HeightMapParametrization3: 0
     - _HeightMax: 1
     - _HeightMax0: 1
     - _HeightMax1: 1
@@ -394,13 +394,13 @@ Material:
     - _HeightPoMAmplitude: 2
     - _HeightPoMAmplitude0: 2
     - _HeightPoMAmplitude1: 0.16
-    - _HeightPoMAmplitude2: 0.16
+    - _HeightPoMAmplitude2: 2
     - _HeightPoMAmplitude3: 2
     - _HeightTessAmplitude: 2
     - _HeightTessAmplitude0: 2
     - _HeightTessAmplitude1: 2
     - _HeightTessAmplitude2: 2
-    - _HeightTessAmplitude3: 150
+    - _HeightTessAmplitude3: 2
     - _HeightTessCenter: 0.5
     - _HeightTessCenter0: 0.5
     - _HeightTessCenter1: 0.5
@@ -418,9 +418,9 @@ Material:
     - _InheritBaseNormal3: 0
     - _InvTilingScale: 1
     - _InvTilingScale0: 0.008333334
-    - _InvTilingScale1: 0.008333334
-    - _InvTilingScale2: 0.0028571428
-    - _InvTilingScale3: 0.0028571428
+    - _InvTilingScale1: 0.005
+    - _InvTilingScale2: 0.005
+    - _InvTilingScale3: 1
     - _Ior: 1.5
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
@@ -428,14 +428,14 @@ Material:
     - _LinkDetailsWithBase: 1
     - _LinkDetailsWithBase0: 1
     - _LinkDetailsWithBase1: 0
-    - _LinkDetailsWithBase2: 0
-    - _LinkDetailsWithBase3: 0
+    - _LinkDetailsWithBase2: 1
+    - _LinkDetailsWithBase3: 1
     - _MaterialID: 1
     - _Metallic: 0
     - _Metallic0: 0
     - _Metallic1: 1
-    - _Metallic2: 0.556
-    - _Metallic3: 0.065656155
+    - _Metallic2: 1
+    - _Metallic3: 1
     - _NormalMapSpace: 0
     - _NormalMapSpace0: 0
     - _NormalMapSpace1: 0
@@ -462,18 +462,18 @@ Material:
     - _Smoothness: 0.5
     - _Smoothness0: 0.127
     - _Smoothness1: 0.5
-    - _Smoothness2: 1
-    - _Smoothness3: 0.32
+    - _Smoothness2: 0.5
+    - _Smoothness3: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMax0: 1
-    - _SmoothnessRemapMax1: 0.25
-    - _SmoothnessRemapMax2: 0.5585413
-    - _SmoothnessRemapMax3: 0.32
+    - _SmoothnessRemapMax1: 0
+    - _SmoothnessRemapMax2: 0
+    - _SmoothnessRemapMax3: 0.08413209
     - _SmoothnessRemapMin: 0
     - _SmoothnessRemapMin0: 0
     - _SmoothnessRemapMin1: 0
     - _SmoothnessRemapMin2: 0
-    - _SmoothnessRemapMin3: 0
+    - _SmoothnessRemapMin3: 0.024342004
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
     - _SpecularOcclusionMode: 1
@@ -505,7 +505,7 @@ Material:
     - _TexWorldScale: 1
     - _TexWorldScale0: 1
     - _TexWorldScale1: 1
-    - _TexWorldScale2: 1
+    - _TexWorldScale2: 500
     - _TexWorldScale3: 1
     - _TexWorldScaleBlendMask: 1
     - _TexWorldScaleEmissive: 1
@@ -548,9 +548,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor0: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor1: {r: 0.9254902, g: 0.9254902, b: 0.9254902, a: 1}
-    - _BaseColor2: {r: 0.9254902, g: 0.9254902, b: 0.9254902, a: 1}
-    - _BaseColor3: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
+    - _BaseColor1: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+    - _BaseColor2: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor3: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
     - _BaseColorMap0_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
