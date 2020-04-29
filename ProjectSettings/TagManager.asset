@@ -12,6 +12,8 @@ TagManager:
   - Surface_Defaults
   - Surface_Stone
   - Ladder
+  - EnemyAIM
+  - EnemyFocus
   layers:
   - Default
   - TransparentFX
