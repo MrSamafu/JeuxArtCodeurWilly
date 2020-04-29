@@ -10,6 +10,10 @@ public class PlayerMotor : MonoBehaviour
     private bool isJumping = false;
     private float currentCameraRotationX = 0f;
     public float cameraRotationLimit = 85f;
+    public bool climb = false;
+    public float speedClimb = 2f;
+    public float direction;
+
 
     public Cinemachine.CinemachineVirtualCamera cam;
 
@@ -34,6 +38,7 @@ public class PlayerMotor : MonoBehaviour
     {
         PerformMovement();
         PerformRotation();
+       
     }
 
 
@@ -49,6 +54,10 @@ public class PlayerMotor : MonoBehaviour
         {
             rb.AddForce(new Vector3(0f,jumpForce,0f));
             isJumping = false;
+        }
+        if (climb)
+        {
+            Climbing(speedClimb);
         }
     }
 
@@ -79,6 +88,34 @@ public class PlayerMotor : MonoBehaviour
         cam.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0f, 0f);
 
         
+    }
+    public void Climbing(float climbSpeed)
+    {
+        
+        rb.transform.Translate(Vector3.up * climbSpeed * direction * Time.fixedDeltaTime);
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Ladder")
+        {
+            rb.useGravity = false;
+            climb = true;
+            
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Ladder")
+        {
+            rb.transform.Translate(transform.TransformDirection(-velocity * direction/10));
+            rb.useGravity = true;
+            climb = false;
+            
+        }
+    }
+    public void directionClimb(float _direction)
+    {
+        direction = _direction;
     }
 
 
