@@ -6,6 +6,7 @@ public class Shoot : MonoBehaviour
     public float range = 100f;
     public Cinemachine.CinemachineVirtualCamera cam;
     public Transform gun;
+    public GameObject impact;
 
     // Update is called once per frame
     void Update()
@@ -23,6 +24,7 @@ public class Shoot : MonoBehaviour
         if(Physics.Raycast(gun.transform.position, gun.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
+            impact.transform.position = hit.point;
         }
     }
 }
