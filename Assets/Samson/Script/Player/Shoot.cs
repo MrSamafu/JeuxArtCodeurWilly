@@ -9,6 +9,8 @@ public class Shoot : MonoBehaviour
     public Transform gun;
     public GameObject Ammo;
     public AudioClip SoundFire;
+    public GameObject exitSocket;
+    public GameObject ammoSocket;
 
 
     // Update is called once per frame
@@ -31,5 +33,7 @@ public class Shoot : MonoBehaviour
         }
         GameObject Bullet = Instantiate(Ammo, transform.position, Quaternion.identity) as GameObject;
         Bullet.GetComponent<Rigidbody>().velocity = transform.forward * force;
+        GameObject Socket = Instantiate(ammoSocket, exitSocket.transform.position, Quaternion.identity);
+        Socket.GetComponent<Rigidbody>().velocity = exitSocket.transform.forward * 1;
     }
 }

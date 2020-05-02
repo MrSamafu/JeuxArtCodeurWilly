@@ -7,8 +7,9 @@ public class DestroyBullet : MonoBehaviour
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag != "pistol")
+        if (collision.gameObject.tag != "Pistol" && collision.gameObject.tag != "Player")
         {
+            Debug.Log(collision.gameObject.tag);
             Destroy(gameObject);
         }
         
