@@ -10,7 +10,7 @@ public class DestroyBullet : MonoBehaviour
         if (collision.gameObject.tag != "Pistol" && collision.gameObject.tag != "Player")
         {
             Debug.Log(collision.gameObject.tag);
-            Destroy(gameObject);
+            Destroy(gameObject,0.1f);
         }
         
     }
