@@ -8999,7 +8999,7 @@ GameObject:
   - component: {fileID: 1447956714}
   - component: {fileID: 1447956713}
   m_Layer: 0
-  m_Name: ExitSocket
+  m_Name: exitSocket
   m_TagString: Pistol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
