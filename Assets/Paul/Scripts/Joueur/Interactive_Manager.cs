@@ -40,13 +40,12 @@ public class Interactive_Manager : MonoBehaviour
 
 
 
-
         //-------------INTERACTION RAMASSAGE D'OBJET-----------------
         if (Input.GetButtonDown("Use")){ 
             RaycastHit hit; 
             Ray ray = Camera.ScreenPointToRay(Input.mousePosition); 
             if (Physics.Raycast (ray, out hit, 100.0f)) {
-                if (hit.transform.tag == "Item") {
+                if (hit.transform.tag == "Item" || hit.transform.tag == "Pistol") {
 
 
                     endGrabbedObject = false;
@@ -58,10 +57,12 @@ public class Interactive_Manager : MonoBehaviour
 
                     GrabbedObj.GetComponent<BoxCollider>().enabled = false;
                     GrabbedObj.GetComponent<Rigidbody>().useGravity = false;
-                    GrabbedObj.transform.position = new Vector3(0, 0, 0);
-                    GrabbedObj.transform.rotation = Quaternion.Euler(0,0,0);
-                    GrabbedObj.transform.localScale = new Vector3(1, 1, 1);
-                    GrabbedObj.transform.SetParent(grabPos.transform, false);
+                    //GrabbedObj.transform.SetParent(grabPos.transform, false);
+                    GrabbedObj.transform.parent = grabPos.transform;
+                    GrabbedObj.transform.position = grabPos.transform.position;
+                    GrabbedObj.transform.localPosition = Vector3.zero;
+                    GrabbedObj.transform.localRotation = Quaternion.Euler(0,0,0);
+                    GrabbedObj.transform.localScale = new Vector3 (1, 1, 1);
                     anim.SetBool("Taking an object ?", true);
                     StartCoroutine(WaitAnimGrabeObject());
 
@@ -78,7 +79,9 @@ public class Interactive_Manager : MonoBehaviour
 
         if(GrabbedObj){
 
-        //        GrabbedObj.transform.rotation = Quaternion.RotateTowards(GrabbedObj.transform.rotation, grabPos.rotation, 2.5F * Time.deltaTime);
+                GrabbedObj.transform.localPosition = Vector3.zero;
+                GrabbedObj.transform.localRotation = Quaternion.Euler(0,0,0);
+
         
         }
 
@@ -111,17 +114,6 @@ public class Interactive_Manager : MonoBehaviour
             }
         }
         //-----------FIN INVENTAIRE--------------------------
-
-
-
-
-
-        // VISER AVEC UN PISTOL
-        if (Input.GetMouseButtonDown(1))
-        anim.SetBool("Aim with pistol ?", true);
-
-        else if (Input.GetMouseButtonUp(1))
-        anim.SetBool("Aim with pistol ?", false);
 
 
 

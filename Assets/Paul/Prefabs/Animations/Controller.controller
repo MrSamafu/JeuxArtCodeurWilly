@@ -14,7 +14,7 @@ AnimatorState:
   - {fileID: -2488245020996013426}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -312,6 +312,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Have a pistol ?
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Aim with pistol ?
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8974377192251494715}
   m_Solo: 0
@@ -404,7 +407,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Have a pistol ?
+    m_ConditionEvent: Aim with pistol ?
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1462294321101325670}
@@ -629,13 +632,13 @@ AnimatorController:
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
   - m_Name: Aim with pistol ?
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
   - m_Name: Taking an object ?
     m_Type: 4
@@ -699,6 +702,21 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
+    m_Name: held pistol
+    m_StateMachine: {fileID: -8197930231236427722}
+    m_Mask: {fileID: 31900000, guid: 96bd6b598d2880b4c8e4951824b11e07, type: 2}
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: 0}
+      m_Motion: {fileID: 0}
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: -1
+    m_DefaultWeight: 1
+    m_IKPass: 1
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
+  - serializedVersion: 5
     m_Name: Inventory
     m_StateMachine: {fileID: 8914899084881317356}
     m_Mask: {fileID: 31900000, guid: 9953bcca52fa64041b1c18d709635127, type: 2}
@@ -715,21 +733,6 @@ AnimatorController:
     m_StateMachine: {fileID: 6518234398801084097}
     m_Mask: {fileID: 31900000, guid: 5689ac6f9acd37448b3b8fc18cd8af9f, type: 2}
     m_Motions: []
-    m_Behaviours: []
-    m_BlendingMode: 0
-    m_SyncedLayerIndex: -1
-    m_DefaultWeight: 1
-    m_IKPass: 1
-    m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 9100000}
-  - serializedVersion: 5
-    m_Name: held pistol
-    m_StateMachine: {fileID: -8197930231236427722}
-    m_Mask: {fileID: 31900000, guid: 96bd6b598d2880b4c8e4951824b11e07, type: 2}
-    m_Motions:
-    - serializedVersion: 2
-      m_State: {fileID: 0}
-      m_Motion: {fileID: 0}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1

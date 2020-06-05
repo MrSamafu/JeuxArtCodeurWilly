@@ -14,22 +14,11 @@ public class Item : MonoBehaviour
     public bool pickedUp;
     public bool equipped;
 
+
+
     void Update(){
         
         if(equipped){
-        
-            //Equiper le joueur (a voir plus tard)
-
-        }
-
-    }
-
-
-    public void ItemUsage(){
-        
-        if(type == "Arme"){
-        
-            equipped = true;
 
         }
 
