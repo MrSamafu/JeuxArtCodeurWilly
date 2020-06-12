@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        bool run = false;
         float _xMov = Input.GetAxisRaw("Horizontal");
         float _zMov = Input.GetAxisRaw("Vertical");
 
@@ -55,19 +58,43 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Jump", true);
             isJumping = true;
             motor.jump(jumpForce);//envoie la valeur au PlayerMotor pour etre éxecuter
+            StartCoroutine(WaitForJumpAnim());
             isJumping = false;
         }
 
-        
+        if (Input.GetButton("Run") && Input.GetButton("Vertical")) // fonction run
+        {
+            anim.SetBool("Run", true);
+            speed = 6;
 
-        
+        }else{
+            anim.SetBool("Run", false);
+            speed = 3;
+        }
+
+
+
+
+
     }
+
+
+
+
+
      public void ToucheFloor(bool _isGrounded)
     {
-        anim.SetBool("Jump", false);
         isGrounded = _isGrounded;
-
+        
     }
-    
+
+
+
+    IEnumerator WaitForJumpAnim(){
+
+        yield return new WaitForSeconds(1.4F);
+        anim.SetBool("Jump", false);
+    }
+
 
 }

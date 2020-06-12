@@ -9,7 +9,6 @@ public class Inventory : MonoBehaviour
     private bool inventoryEnabled;
     Animator anim;
     public GameObject inventory;
-
     private int allSlotsInventory;
     private int allSlotsBar;
     private int enabledSlots;
@@ -37,7 +36,7 @@ public class Inventory : MonoBehaviour
 
         //COMPONENTS
         anim = GetComponentInChildren<Animator>();
-
+        
 
         // INVENTORY BOUCLE
         for(int i = 0; i < allSlotsInventory; i++){
@@ -74,6 +73,10 @@ public class Inventory : MonoBehaviour
 
         // VISER AVEC UN PISTOL
         if(itemTaked != null){
+            
+            gameObject.GetComponentInChildren<DitzelGames.FastIK.FastIKFabric>().enabled = true;
+
+
             if(itemTaked.tag == "Pistol"){
                 anim.SetBool("Have a pistol ?", true);
                 if (Input.GetMouseButtonDown(1))
@@ -85,10 +88,11 @@ public class Inventory : MonoBehaviour
             }else{
                     anim.SetBool("Have a pistol ?", false);
             }
+        }else{
+
+            gameObject.GetComponentInChildren<DitzelGames.FastIK.FastIKFabric>().enabled = false;
+
         }
-
-
-
 
         //-----------GESTION DE LA BAR--------------
         if (Input.GetKeyDown (KeyCode.Alpha1)){

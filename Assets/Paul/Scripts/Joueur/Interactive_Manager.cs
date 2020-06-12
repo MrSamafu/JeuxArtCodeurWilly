@@ -17,6 +17,8 @@ public class Interactive_Manager : MonoBehaviour
     public bool endGrabbedObject;
     public GameObject HandLeft;
 
+    public GameObject InteractionCrosshair;
+
     void Start(){
         
         //COMPONENTS
@@ -35,18 +37,25 @@ public class Interactive_Manager : MonoBehaviour
 
 
 
+
+
     void Update(){
-        
-
-
+        RaycastHit hit; 
+        Ray ray = Camera.ScreenPointToRay(Input.mousePosition); 
 
         //-------------INTERACTION RAMASSAGE D'OBJET-----------------
+        if (Physics.Raycast (ray, out hit, 100.0f)) {
+            if (hit.transform.tag == "Item" || hit.transform.tag == "Pistol") {
+
+                InteractionCrosshair.SetActive(true);
+
+            }else{
+                InteractionCrosshair.SetActive(false);
+            }
+        }
         if (Input.GetButtonDown("Use")){ 
-            RaycastHit hit; 
-            Ray ray = Camera.ScreenPointToRay(Input.mousePosition); 
             if (Physics.Raycast (ray, out hit, 100.0f)) {
                 if (hit.transform.tag == "Item" || hit.transform.tag == "Pistol") {
-
 
                     endGrabbedObject = false;
                     
@@ -76,15 +85,14 @@ public class Interactive_Manager : MonoBehaviour
 
         }
 
-
         if(GrabbedObj){
 
                 GrabbedObj.transform.localPosition = Vector3.zero;
                 GrabbedObj.transform.localRotation = Quaternion.Euler(0,0,0);
+                GrabbedObj.transform.localScale = new Vector3 (1, 1, 1);
 
         
         }
-
 
 
         //----------------INVENTAIRE--------------------------
@@ -116,19 +124,13 @@ public class Interactive_Manager : MonoBehaviour
         //-----------FIN INVENTAIRE--------------------------
 
 
-
-
-
-
-
-
-
     }
 
 
-    IEnumerator WaitAnimGrabeObject(){
 
-        yield return new WaitForSeconds(3.5F);
+
+    IEnumerator WaitAnimGrabeObject(){
+        yield return new WaitForSeconds(2F);
         anim.SetBool("Taking an object ?", false);
         endGrabbedObject = true;
         Item item = GrabbedObj.GetComponent<Item>();
