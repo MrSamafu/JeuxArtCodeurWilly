@@ -62,6 +62,12 @@ public class PlayerController : MonoBehaviour
             isJumping = false;
         }
 
+
+
+
+
+        
+
         if (Input.GetButton("Run") && Input.GetButton("Vertical")) // fonction run
         {
             anim.SetBool("Run", true);

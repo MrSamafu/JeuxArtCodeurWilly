@@ -13,6 +13,7 @@ public class PlayerMotor : MonoBehaviour
     public bool climb = false;
     public float speedClimb = 2f;
     public float direction;
+    public float ForceFallMultiplier = 2.5f;
 
 
     public Cinemachine.CinemachineVirtualCamera cam;
@@ -50,11 +51,17 @@ public class PlayerMotor : MonoBehaviour
         }else{
             isWalking = false;
         }
-        if(isJumping != false)
+
+
+        if(isJumping)
         {
-            rb.AddForce(new Vector3(0f,jumpForce,0f));
+            rb.AddForce(new Vector3(0f,jumpForce,0f) * (ForceFallMultiplier - 1));
+
             isJumping = false;
         }
+
+
+
         if (climb)
         {
             Climbing(speedClimb);
@@ -70,6 +77,8 @@ public class PlayerMotor : MonoBehaviour
     public void RotateCamera(float _cameraRotationX){
         cameraRotationX = _cameraRotationX;
     }
+
+
 
 
     public void jump(float _jumpForce){
