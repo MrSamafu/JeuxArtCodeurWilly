@@ -4,17 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Joueur
-  - Fire
-  - Pistol
-  - Item
-  - Terrain
-  - Surface_Defaults
-  - Surface_Stone
-  - Ladder
-  - EnemyAIM
-  - EnemyFocus
-  - EmptyUIInventory
+  - Shootable
   layers:
   - Default
   - TransparentFX
@@ -24,11 +14,11 @@ TagManager:
   - UI
   - 
   - 
-  - LocalPlayer
-  - RemotePlayer
-  - Capsule
-  - headPlayer
-  - FPS
+  - Lighting
+  - Ground
+  - Postprocessing
+  - 
+  - 
   - 
   - 
   - 
@@ -49,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
