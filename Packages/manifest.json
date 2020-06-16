@@ -6,15 +6,12 @@
     "com.unity.analytics": "3.3.5",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",
-<<<<<<< HEAD
-    "com.unity.ide.vscode": "1.2.0",
-=======
     "com.unity.ide.vscode": "1.1.4",
->>>>>>> parent of 1d7bc13... erreur
     "com.unity.postprocessing": "2.3.0",
     "com.unity.probuilder": "4.2.3",
     "com.unity.purchasing": "2.0.6",
     "com.unity.render-pipelines.high-definition": "7.3.1",
+    "com.unity.render-pipelines.high-definition-config": "7.4.1",
     "com.unity.terrain-tools": "3.0.1-preview",
     "com.unity.test-framework": "1.1.14",
     "com.unity.textmeshpro": "2.0.1",

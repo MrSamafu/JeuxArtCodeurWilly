@@ -15643,11 +15643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: efc9527047d14294b8942acc755f4701, type: 2}
   m_StaticLightingSkyUniqueID: 1
-<<<<<<< HEAD
-  m_SkySettings: {fileID: 422124580}
-=======
   m_SkySettings: {fileID: 277764714}
->>>>>>> parent of 64c45d7... Drag & Drop items
   m_SkySettingsFromProfile: {fileID: 2988401234732090587, guid: efc9527047d14294b8942acc755f4701,
     type: 2}
 --- !u!4 &447034396
@@ -18322,10 +18318,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
-<<<<<<< HEAD
   m_Maskable: 1
-=======
->>>>>>> parent of 64c45d7... Drag & Drop items
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -70066,38 +70059,12 @@ PrefabInstance:
     - target: {fileID: 7314535681547728116, guid: cd281357a9d9ce14dad06135b9976dfe,
         type: 3}
       propertyPath: m_LocalRotation.x
-<<<<<<< HEAD
-      value: -0.005315219
-=======
       value: -0.0051119593
->>>>>>> parent of 64c45d7... Drag & Drop items
       objectReference: {fileID: 0}
     - target: {fileID: 7314535681547728116, guid: cd281357a9d9ce14dad06135b9976dfe,
         type: 3}
       propertyPath: m_LocalRotation.y
-<<<<<<< HEAD
-      value: 0.9891005
-=======
       value: 0.9898697
->>>>>>> parent of 64c45d7... Drag & Drop items
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314535681547728116, guid: cd281357a9d9ce14dad06135b9976dfe,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-<<<<<<< HEAD
-      value: -0.03685519
-=======
-      value: -0.036881566
->>>>>>> parent of 64c45d7... Drag & Drop items
-      objectReference: {fileID: 0}
-    - target: {fileID: 7314535681547728116, guid: cd281357a9d9ce14dad06135b9976dfe,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-<<<<<<< HEAD
-      value: -0.1424559
-=======
-      value: -0.13700967
->>>>>>> parent of 64c45d7... Drag & Drop items
       objectReference: {fileID: 0}
     - target: {fileID: 7314535681547728116, guid: cd281357a9d9ce14dad06135b9976dfe,
         type: 3}
