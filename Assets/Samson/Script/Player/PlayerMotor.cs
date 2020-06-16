@@ -14,7 +14,7 @@ public class PlayerMotor : MonoBehaviour
     public float speedClimb = 2f;
     public float direction;
     public float ForceFallMultiplier = 2.5f;
-    Animator anim;
+
 
     public Cinemachine.CinemachineVirtualCamera cam;
 
@@ -25,7 +25,6 @@ public class PlayerMotor : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponentInChildren<Animator> ();
     }
 
 
@@ -66,17 +65,7 @@ public class PlayerMotor : MonoBehaviour
         if (climb)
         {
             Climbing(speedClimb);
-            if (Input.GetButton("Vertical")){
-                anim.SetBool("StayClimbed", false);
-                anim.SetBool("Climb", true);
-            }
-            if (Input.GetButtonUp("Vertical")){
-                anim.SetBool("Climb", false);
-                anim.SetBool("StayClimbed", true);
-            }
         }
-
-
     }
 
 
@@ -118,10 +107,8 @@ public class PlayerMotor : MonoBehaviour
     {
         if (other.gameObject.tag == "Ladder")
         {
-            anim.SetBool("StayClimbed", true);
             rb.useGravity = false;
             climb = true;
-
             
         }
     }
@@ -132,8 +119,6 @@ public class PlayerMotor : MonoBehaviour
             rb.transform.Translate(transform.TransformDirection(-velocity * direction/10));
             rb.useGravity = true;
             climb = false;
-            anim.SetBool("Climb", false);
-            anim.SetBool("StayClimbed", false);
             
         }
     }

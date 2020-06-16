@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Inventory : MonoBehaviour{
+public class Inventory : MonoBehaviour
+{
 
     private bool inventoryEnabled;
     Animator anim;
@@ -95,73 +96,58 @@ public class Inventory : MonoBehaviour{
 
         //-----------GESTION DE LA BAR--------------
         if (Input.GetKeyDown (KeyCode.Alpha1)){
-            if(slotBar[0].GetComponent<Slot>().empty == false){
-
-                if(itemTaked != null){
-                    itemTaked.SetActive(false);
-                    itemTaked.transform.SetParent(slotBar[activatedSlot].transform, false);
-                    itemTaked.GetComponent<Item>().equipped = false;
-                }
-                activatedSlot = 0;
-                itemTaked = null;
-                itemTaked = slotBar[0].GetComponent<Slot>().item.gameObject;
-
+            if(itemTaked != null){
+                itemTaked.SetActive(false);
+                itemTaked.transform.SetParent(slotBar[activatedSlot].transform, false);
+                itemTaked.GetComponent<Item>().equipped = false;
             }
+            activatedSlot = 0;
+            itemTaked = null;
+            itemTaked = slotBar[0].GetComponent<Slot>().item.gameObject;
         }
 
         if (Input.GetKeyDown (KeyCode.Alpha2)){
-            if(slotBar[0].GetComponent<Slot>().empty == false){
-
-                if(itemTaked != null){
-                    itemTaked.SetActive(false);
-                    itemTaked.transform.SetParent(slotBar[activatedSlot].transform, false);
-                    itemTaked.GetComponent<Item>().equipped = false;
-                }
-                activatedSlot = 1;
-                itemTaked = null;
-                itemTaked = slotBar[1].GetComponent<Slot>().item.gameObject;
+            if(itemTaked != null){
+                itemTaked.SetActive(false);
+                itemTaked.transform.SetParent(slotBar[activatedSlot].transform, false);
+                itemTaked.GetComponent<Item>().equipped = false;
             }
+            activatedSlot = 1;
+            itemTaked = null;
+            itemTaked = slotBar[1].GetComponent<Slot>().item.gameObject;
         }
 
         if (Input.GetKeyDown (KeyCode.Alpha3)){
-            if(slotBar[0].GetComponent<Slot>().empty == false){
-
-                if(itemTaked != null){
-                    itemTaked.SetActive(false);
-                    itemTaked.transform.SetParent(slotBar[activatedSlot].transform, false);
-                    itemTaked.GetComponent<Item>().equipped = false;
-                }
-                activatedSlot = 2;
-                itemTaked = null;
-                itemTaked = slotBar[2].GetComponent<Slot>().item.gameObject;
+            if(itemTaked != null){
+                itemTaked.SetActive(false);
+                itemTaked.transform.SetParent(slotBar[activatedSlot].transform, false);
+                itemTaked.GetComponent<Item>().equipped = false;
             }
+            activatedSlot = 2;
+            itemTaked = null;
+            itemTaked = slotBar[2].GetComponent<Slot>().item.gameObject;
         }
 
         if (Input.GetKeyDown (KeyCode.Alpha4)){
-            if(slotBar[0].GetComponent<Slot>().empty == false){
-
-                if(itemTaked != null){
-                    itemTaked.SetActive(false);
-                    itemTaked.transform.SetParent(slotBar[activatedSlot].transform, false);
-                    itemTaked.GetComponent<Item>().equipped = false;
-                }
-                activatedSlot = 3;
-                itemTaked = null;
-                itemTaked = slotBar[3].GetComponent<Slot>().item.gameObject;
+            if(itemTaked != null){
+                itemTaked.SetActive(false);
+                itemTaked.transform.SetParent(slotBar[activatedSlot].transform, false);
+                itemTaked.GetComponent<Item>().equipped = false;
             }
+            activatedSlot = 3;
+            itemTaked = null;
+            itemTaked = slotBar[3].GetComponent<Slot>().item.gameObject;
         }
 
         if (Input.GetKeyDown (KeyCode.Alpha5)){
-            if(slotBar[0].GetComponent<Slot>().empty == false){
-                if(itemTaked != null){
-                    itemTaked.SetActive(false);
-                    itemTaked.transform.SetParent(slotBar[activatedSlot].transform, false);
-                    itemTaked.GetComponent<Item>().equipped = false;
-                }
-                activatedSlot = 4;
-                itemTaked = null;
-                itemTaked = slotBar[4].GetComponent<Slot>().item.gameObject;
+            if(itemTaked != null){
+                itemTaked.SetActive(false);
+                itemTaked.transform.SetParent(slotBar[activatedSlot].transform, false);
+                itemTaked.GetComponent<Item>().equipped = false;
             }
+            activatedSlot = 4;
+            itemTaked = null;
+            itemTaked = slotBar[4].GetComponent<Slot>().item.gameObject;
         }
 
 
@@ -333,6 +319,9 @@ public class Inventory : MonoBehaviour{
         }
 
     }
+
+
+
 
 
 

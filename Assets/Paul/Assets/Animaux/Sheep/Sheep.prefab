@@ -2207,12 +2207,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400000}
-  - component: {fileID: -2867524945570569369}
+  - component: {fileID: 11100000}
   - component: {fileID: 6397225568109193652}
   - component: {fileID: 8571129292602621530}
   - component: {fileID: 3940419672743106946}
-  - component: {fileID: 8757539554267491828}
-  - component: {fileID: -5193304395794210625}
   m_Layer: 0
   m_Name: Sheep
   m_TagString: Untagged
@@ -2236,22 +2234,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &-2867524945570569369
-Rigidbody:
+--- !u!111 &11100000
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100136}
-  serializedVersion: 2
-  m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: c063c4587f27bf94ea55ca3b2fc3dda9, type: 2}
+  m_Animations:
+  - {fileID: 11, guid: 7cbdcbb93b504e349877d40e7f090824, type: 2}
+  - {fileID: 8, guid: 7cbdcbb93b504e349877d40e7f090824, type: 2}
+  - {fileID: 9, guid: 7cbdcbb93b504e349877d40e7f090824, type: 2}
+  - {fileID: 7400000, guid: c063c4587f27bf94ea55ca3b2fc3dda9, type: 2}
+  - {fileID: 10, guid: 7cbdcbb93b504e349877d40e7f090824, type: 2}
+  - {fileID: 6, guid: 7cbdcbb93b504e349877d40e7f090824, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 1
 --- !u!65 &6397225568109193652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2291,41 +2294,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25865102, y: 0.41251564, z: 0.17938562}
   m_Center: {x: 0.0069938344, y: 1.2169318, z: 0.8439125}
---- !u!111 &8757539554267491828
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100136}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: c063c4587f27bf94ea55ca3b2fc3dda9, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: c063c4587f27bf94ea55ca3b2fc3dda9, type: 2}
-  - {fileID: 7400000, guid: 43e1a669460127147b9573f373db2999, type: 2}
-  - {fileID: 7400000, guid: 1dfcbdb5cd57f36469b9ddb6595726fc, type: 2}
-  - {fileID: 7400000, guid: 52064233a75787b48a1daaee3d2187cc, type: 2}
-  - {fileID: 7400000, guid: 4488fa706a43f784b8b4fc6e53bec061, type: 2}
-  - {fileID: 7400000, guid: feddb5c56eae9c44d939bbd87777fbbd, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 1
-  m_CullingType: 0
---- !u!114 &-5193304395794210625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a33c871e47a2644ae103a187c55077, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnColere: 0
-  Peur: 0
-  Pacifique: 1
-  vie: 100
-  "sant\xE9": 100

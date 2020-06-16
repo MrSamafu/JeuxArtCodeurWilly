@@ -4,7 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Shootable
+=======
+  - Joueur
+  - Fire
+  - Pistol
+  - Item
+  - Terrain
+  - Surface_Defaults
+  - Surface_Stone
+  - Ladder
+  - EnemyAIM
+  - EnemyFocus
+>>>>>>> parent of 64c45d7... Drag & Drop items
   layers:
   - Default
   - TransparentFX
