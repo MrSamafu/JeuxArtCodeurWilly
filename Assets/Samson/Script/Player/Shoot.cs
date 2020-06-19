@@ -28,7 +28,7 @@ public class Shoot : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(gun.transform.position, gun.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+           
             
         }
         GameObject Bullet = Instantiate(Ammo, transform.position, Quaternion.identity) as GameObject;
