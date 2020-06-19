@@ -19,7 +19,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData pointerEventData){
         
-        UseItem();
+
 
     }
 
@@ -36,10 +36,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     }
 
-    public void UseItem(){
-        
-        item.GetComponent<Item>().ItemUsage();
 
-    }
 
 }
