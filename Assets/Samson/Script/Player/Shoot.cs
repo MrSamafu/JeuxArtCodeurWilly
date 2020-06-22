@@ -19,8 +19,13 @@ public class Shoot : MonoBehaviour
         Debug.DrawRay(gun.transform.position, gun.transform.forward, Color.red);
         if (Input.GetButtonDown("Fire1"))
         {
-            GetComponent<AudioSource>().PlayOneShot(SoundFire);
-            Shooting();
+            if(GeneralSetting.bullets > 0)
+            {
+                GetComponent<AudioSource>().PlayOneShot(SoundFire);
+                Shooting();
+                GeneralSetting.bullets = GeneralSetting.bullets - 1;
+            }
+           
         } 
     }
     void Shooting()

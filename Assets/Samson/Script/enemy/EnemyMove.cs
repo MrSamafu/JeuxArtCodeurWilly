@@ -12,7 +12,7 @@ public class EnemyMove : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        target = GameObject.Find("EnemyLoop (" + Random.Range(1, 4) + ")");
+        target = GameObject.Find("EnemyLoop (" + Random.Range(1, 12) + ")");
         anim = GetComponent<Animator>();
         StartCoroutine(ReachPoint());
 
@@ -31,7 +31,7 @@ public class EnemyMove : MonoBehaviour
         agent.isStopped = true;
         anim.SetBool("Walk", false);
         yield return new WaitForSeconds(2f);
-        target = GameObject.Find("EnemyLoop (" + Random.Range(1, 4) + ")");
+        target = GameObject.Find("EnemyLoop (" + Random.Range(1, 12) + ")");
         anim.SetBool("Walk", true);
         agent.isStopped = false;
         agent.SetDestination(target.transform.position);
