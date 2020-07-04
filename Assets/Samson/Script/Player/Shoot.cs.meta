@@ -3,7 +3,15 @@ guid: 189fb876671252c43b9b8fb65b915a5c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cam: {instanceID: 0}
+  - gun: {instanceID: 0}
+  - Ammo: {instanceID: 0}
+  - SoundFire: {instanceID: 0}
+  - exitSocket: {instanceID: 0}
+  - ammoSocket: {instanceID: 0}
+  - Impact: {fileID: 8686418753467595240, guid: 59e5e5b232e1f044ebbe459b4b04b536,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

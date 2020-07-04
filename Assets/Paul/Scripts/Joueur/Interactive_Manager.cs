@@ -44,7 +44,7 @@ public class Interactive_Manager : MonoBehaviour
         Ray ray = Camera.ScreenPointToRay(Input.mousePosition); 
 
         //-------------INTERACTION RAMASSAGE D'OBJET-----------------
-        if (Physics.Raycast (ray, out hit, 100.0f)) {
+        if (Physics.Raycast (ray, out hit, 1.0f)) {
             if (hit.transform.tag == "Item" || hit.transform.tag == "Pistol") {
 
                 InteractionCrosshair.SetActive(true);

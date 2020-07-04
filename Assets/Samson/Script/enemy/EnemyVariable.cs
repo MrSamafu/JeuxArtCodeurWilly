@@ -14,15 +14,8 @@ public class EnemyVariable : MonoBehaviour
         anim = GetComponent<Animator>();
         IK = GetComponent<IKControl>();
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Bullet")
-        {
-            life -= 25f;
-            Debug.Log("enemy life = " + life);
-        }
-    }
-    private void FixedUpdate()
+    
+    private void Update()
     {
         if (life <= 0)
         {
@@ -30,5 +23,10 @@ public class EnemyVariable : MonoBehaviour
             IK.gameObject.SetActive(false);
             
         }
+    }
+    public void Touch(float damage)
+    {
+        life = life - damage;
+        Debug.Log("enemy life : " + life);
     }
 }

@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 310656364334988392}
   - component: {fileID: 307183533633786079}
   - component: {fileID: 2504919245921468164}
-  - component: {fileID: 1240805156}
   - component: {fileID: 1240805155}
+  - component: {fileID: 756212493}
+  - component: {fileID: 756212492}
   m_Layer: 0
   m_Name: carton box travel
   m_TagString: Untagged
@@ -542,7 +543,20 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!54 &1240805156
+--- !u!65 &1240805155
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2665114810131091074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 0.99999994, z: 1.0000008}
+  m_Center: {x: 0.50000006, y: 0.49999997, z: -0.5000002}
+--- !u!54 &756212493
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -550,15 +564,15 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2665114810131091074}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!65 &1240805155
+  m_CollisionDetection: 0
+--- !u!65 &756212492
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
