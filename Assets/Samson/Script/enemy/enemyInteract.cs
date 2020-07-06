@@ -6,9 +6,11 @@ public class enemyInteract : MonoBehaviour
 {
     public Behaviour[] Target;
     private int countTarget = 0;
+    EnemyMove enemyMove;
     // Start is called before the first frame update
     void Start()
     {
+        enemyMove = GetComponentInParent<EnemyMove>();
         for (int i = 0; i < Target.Length; i++)
         {
             Target[i].enabled = false;
@@ -30,16 +32,26 @@ public class enemyInteract : MonoBehaviour
             {
                 Target[i].enabled = true;
             }
+            if (!EnemyMove.detect)
+            {
+                enemyMove.attack();
+                EnemyMove.detect = true;
+            } 
+                
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (!EnemyMove.detect)
         {
-            for(int i = 0; i < countTarget; i++)
+            if (other.gameObject.tag == "Player")
             {
-                Target[i].enabled = false;
+                for(int i = 0; i < countTarget; i++)
+                {
+                    Target[i].enabled = false;
+                }
             }
         }
+        
     }
 }

@@ -8,6 +8,8 @@ public class EnemyMove : MonoBehaviour
     NavMeshAgent agent;
     GameObject target;
     Animator anim;
+    GameObject player;
+    public static bool detect;
 
     void Start()
     {
@@ -15,16 +17,38 @@ public class EnemyMove : MonoBehaviour
         target = GameObject.Find("EnemyLoop (" + Random.Range(1, 12) + ")");
         anim = GetComponent<Animator>();
         StartCoroutine(ReachPoint());
+        player = GameObject.Find("enemyShootTarget");
+        detect = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) <= 1f)
+        if (!detect)
         {
-            StartCoroutine(ReachPoint());
+            if (Vector3.Distance(transform.position, target.transform.position) <= 1f)
+            {
+                StartCoroutine(ReachPoint());
+            }
+
         } 
+        else if (detect)
+        {
+            if(Vector3.Distance(transform.position, player.transform.position) <= 5f)
+            {
+                agent.isStopped = true;
+            }
+            else
+            {
+                agent.SetDestination(player.transform.position);
+            }
+        }
+        
+    }
+    public void attack()
+    {
+        agent.SetDestination(player.transform.position);
     }
     IEnumerator ReachPoint()
     {
