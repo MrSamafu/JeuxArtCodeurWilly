@@ -23,6 +23,7 @@ public class EnemyVision : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            enemyAction.playerDetected = true;
             StopCoroutine(PlayerAsLost());
         }
     }

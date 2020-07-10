@@ -12,6 +12,7 @@ public class EnemyAction : MonoBehaviour
     private float randomDistance;
     public bool playerDetected;
     public bool playerLost;
+    private bool dead;
     
     public int randomMin;
     public int randomMax;
@@ -24,38 +25,37 @@ public class EnemyAction : MonoBehaviour
         randomDistance = Random.Range(5, 8);
         StartCoroutine(RandomChange());
         StartCoroutine(ReachPoint());
-        
-
-
+        dead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Patrouille
-        if (Vector3.Distance(transform.position, target.transform.position) <= 1f && !playerDetected)
+        if (!dead)
         {
-            StartCoroutine(ReachPoint());
+                //Patrouille
+            if (Vector3.Distance(transform.position, target.transform.position) <= 1f && !playerDetected)
+            {
+                StartCoroutine(ReachPoint());
+            }
+            else if (playerDetected)
+            {
+                //Cours vers le joueur
+                FindPlayer();
+            }
+            else if (playerLost)
+            {
+                PlayerLost();
+            }
+            anim.SetBool("Detect", playerDetected);
+            Debug.DrawRay(transform.position + new Vector3(0, 1.3f, 0), (transform.position - player.transform.position).normalized, Color.blue);
         }
-        else if (playerDetected)
-        {
-            //Cours vers le joueur
-            FindPlayer();
-        }
-        else if (playerLost)
-        {
-            PlayerLost();
-        }
-        anim.SetBool("Detect", playerDetected);
-        Debug.DrawRay(transform.position + new Vector3(0, 1.3f, 0), (transform.position - player.transform.position).normalized, Color.blue);
-        
-
     }
     public void FindPlayer()
     {
         anim.SetBool("Walk", false);//si le joueur est vu on arrete l'animation de marche
 
-        if (Vector3.Distance(transform.position, player.transform.position) <= randomDistance)
+        if (Vector3.Distance(transform.position, player.transform.position) <= 2f)
         {
             anim.SetBool("Run", false);
             agent.isStopped = true;
@@ -77,6 +77,17 @@ public class EnemyAction : MonoBehaviour
         agent.speed = 1.7f;
         StartCoroutine(ReachPoint());
     }
+    public void IsDead()
+    {
+        dead = true;
+        GetComponent<EnemyVariable>().enabled = false;
+        StopAllCoroutines();
+        anim.SetTrigger("Dead");
+        anim.SetBool("Run", false);
+        anim.SetBool("Walk", false);
+        anim.SetBool("Detect", false);
+        agent.isStopped = true;
+    }
     IEnumerator ReachPoint()
     {
         agent.isStopped = true;
@@ -86,6 +97,7 @@ public class EnemyAction : MonoBehaviour
         anim.SetBool("Walk", true);
         agent.isStopped = false;
         agent.SetDestination(target.transform.position);
+        
     }
     IEnumerator RandomChange()
     {

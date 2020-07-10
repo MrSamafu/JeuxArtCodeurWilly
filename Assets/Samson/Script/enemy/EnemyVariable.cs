@@ -7,21 +7,20 @@ public class EnemyVariable : MonoBehaviour
     public float life = 100f;
     public float armor = 100f;
     Animator anim;
-    Component IK;
+    EnemyAction enemyAction;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
-        IK = GetComponent<IKControl>();
+        enemyAction = GetComponent<EnemyAction>();
+        
     }
     
     private void Update()
     {
         if (life <= 0)
         {
-            anim.SetBool("Dead", true);
-            IK.gameObject.SetActive(false);
-            
+            enemyAction.IsDead();
         }
     }
     public void Touch(float damage)

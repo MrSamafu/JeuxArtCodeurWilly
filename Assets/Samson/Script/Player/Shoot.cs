@@ -2,7 +2,7 @@
 
 public class Shoot : MonoBehaviour
 {
-    public float damage = 10f;
+    public float damage = 50f;
     public float range = 100f;
     public int force = 10000;
     public Cinemachine.CinemachineVirtualCamera cam;
