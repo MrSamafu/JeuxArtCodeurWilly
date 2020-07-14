@@ -860,6 +860,7 @@ MonoBehaviour:
   climb: 0
   speedClimb: 2
   direction: 0
+  ForceFallMultiplier: 2.5
   cam: {fileID: 4822211009551342268}
   isWalking: 0
 --- !u!114 &6148191276918272883
@@ -899,6 +900,7 @@ MonoBehaviour:
   grabPos: {fileID: 5374739571992827436}
   endGrabbedObject: 1
   HandLeft: {fileID: 8107026004423357543}
+  InteractionCrosshair: {fileID: 0}
 --- !u!114 &3482935487640041483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11224,6 +11226,12 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 4822211009551342268}
+    - target: {fileID: 5936164485244932831, guid: 46647c121ceb6b94599c05a7e6f84355,
+        type: 3}
+      propertyPath: Impact
+      value: 
+      objectReference: {fileID: 6452854413962271121, guid: 3d2cf42b7989e534c8b6a642f1b80a0d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46647c121ceb6b94599c05a7e6f84355, type: 3}
 --- !u!4 &4101662799131286608 stripped
